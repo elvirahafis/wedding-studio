@@ -1,0 +1,70 @@
+================================================================================
+KUMPULAN MATERI PROMOSI SHOPEE - WEDDING STUDIO & SOURCE CODE UNDANGAN DIGITAL
+================================================================================
+
+[PILIHAN JUDUL PRODUK SHOPEE (SEO FRIENDLY & HIGH CONVERTING)]
+Pilihan 1:
+Source Code Web Undangan Pernikahan Digital + CMS Visual Studio 19 Tema Adat & Modern Siap Pakai
+
+Pilihan 2:
+Template Website Undangan Nikah Online Responsive + CMS Editor Tanpa Database 19 Tema Lengkap
+
+Pilihan 3:
+Jasa & Source Code Undangan Digital Website Aesthetic Luxury 19 Tema Nusantara Full Fitur Musik RSVP
+
+--------------------------------------------------------------------------------
+[DESKRIPSI LENGKAP PRODUK SHOPEE - TINGGAL COPY & PASTE]
+--------------------------------------------------------------------------------
+
+✨ SOURCE CODE WEBSITE UNDANGAN PERNIKAHAN DIGITAL LUXURY + CMS VISUAL STUDIO ✨
+Lengkap dengan 19 Tema Adat Nusantara & Modern Aesthetic | Siap Pakai & Siap Dijual Kembali!
+
+Solusi terbaik bagi Anda yang ingin membuat website undangan pernikahan sendiri, membuka jasa undangan digital, ataupun menjual template website tanpa pusing coding dan tanpa perlu server database rumit!
+
+Produk ini 100% menggunakan arsitektur Pure Static (HTML5, Vanilla CSS, dan JavaScript). Sangat ringan, loading di bawah 1 detik, dan bisa di-hosting GRATIS seumur hidup di Cloudflare Pages, Vercel, Netlify, maupun cPanel!
+
+=======================================
+🌟 KEUNGGULAN UTAMA PRODUK
+=======================================
+1. 🎨 LENGKAP 19 PRESET TEMA TERPOPULER DI INDONESIA
+   • 🇮🇩 Tema Adat Nusantara: Jawa Keraton, Sunda Priangan, Minangkabau, Batak Ulos, Bali Kencana, Bugis Makassar, Melayu DiRaja, Aceh Meusyeuhu, Palembang Aesan.
+   • ✨ Tema Modern & Editorial: Botanical Editorial, Emerald Luxury, Warm Terracotta, Dusty Rose, Midnight Celestial, Monochrome Haute Couture.
+   • 🏝️ Tema Nuansa Alam & Pantai: Coastal Sunset Beach, Garden Party & Fairy Lights.
+   • 🕌 Tema Religi & Kultural: Islamic Modern Arabesque, Oriental Sangjit Chinoiserie.
+
+2. 🛠️ DILENGKAPI CMS VISUAL STUDIO (ADMIN.HTML)
+   • Pengaturan Warna Real-Time (Custom hex color pickers).
+   • Pengaturan Tipografi & Font Google Fonts (Cinzel, Playfair Display, Cormorant, dll).
+   • Form Data Mempelai, Kisah Cinta, Galeri Foto (Bisa upload lokal atau link).
+   • Rangkaian Acara Akad & Resepsi lengkap dengan Google Maps & Dresscode.
+   • Fitur Amplop Digital / Rekening Bank / QRIS e-Wallet (Copy-to-Clipboard otomatis).
+   • Pemutar Musik Latar (Floating music disc dengan tombol mute/unmute).
+   • Buku Tamu & RSVP Interaktif.
+   • Generator Link Tamu Undangan Khusus WhatsApp otomatis (Kepada Yth. Nama Tamu).
+   • Tombol 1-Klik "Unduh Jadi (HTML)" siap kirim ke pengantin!
+
+3. 🚀 ZERO-SERVER & ZERO-DATABASE (HEMAT BIAYA OPERASIONAL)
+   • Tidak memerlukan database MySQL atau server PHP/NodeJS.
+   • Penyimpanan data otomatis di browser (LocalStorage) & file JSON.
+   • Bisa di-hosting 100% GRATIS di Cloudflare Pages / GitHub Pages.
+
+=======================================
+📦 APA SAJA YANG ANDA DAPATKAN?
+=======================================
+✅ 1x File Source Code Lengkap (index.html, admin.html, css/, js/)
+✅ 1x Paket File Siap Deploy Cloudflare Pages / cPanel (.zip)
+✅ 19x Preset Desain Tema Adat & Modern lengkap dengan ornamen SVG vektor
+✅ 1x Panduan Lengkap Cara Pakai, Kustomisasi, dan Cara Hosting Online (README.md)
+✅ Lisensi Komersial (Boleh dipakai sendiri atau dijual kembali untuk jasa pengantin tanpa royalti)
+
+=======================================
+Cara Pemesanan & Pengiriman:
+=======================================
+1. Lakukan checkout seperti biasa.
+2. Cantumkan alamat EMAIL aktif Anda pada catatan pesanan atau via Chat Shopee.
+3. File lengkap dan link akses akan langsung dikirimkan ke email Anda dalam waktu 5-10 menit.
+4. Jika butuh bantuan saat upload atau kustomisasi, kami siap pandu via chat!
+
+--------------------------------------------------------------------------------
+[TAGS & KATA KUNCI SHOPEE]
+#undanganpernikahan #undangandigital #sourcecodeundangan #websiteundangan #templateundangan #undanganonline #undangannikah #jasaundangan #undanganweb #sourcecode #webdesign
