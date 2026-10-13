@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>A &amp; M Wedding — The Couple</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#fbf9f6",
+            "surface-dim": "#dbdad7",
+            "inverse-primary": "#cbc5c0",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#87837f",
+            "on-surface-variant": "#4b463f",
+            "secondary": "#6c5b4d",
+            "on-secondary": "#ffffff",
+            "outline": "#7c766e",
+            "primary": "#000000",
+            "on-tertiary-fixed": "#241a00",
+            "surface-variant": "#e4e2df",
+            "surface-container-low": "#f5f3f0",
+            "surface-container": "#efeeeb",
+            "error": "#ba1a1a",
+            "on-surface": "#1b1c1a",
+            "on-secondary-fixed-variant": "#534437",
+            "tertiary-container": "#cca730",
+            "primary-fixed": "#e7e1dc",
+            "surface-container-high": "#eae8e5",
+            "on-primary-fixed-variant": "#494643",
+            "on-tertiary-fixed-variant": "#574500",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#1d1b18",
+            "secondary-container": "#f2dcca",
+            "secondary-fixed-dim": "#d8c3b2",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#ffe088",
+            "on-secondary-fixed": "#25190f",
+            "outline-variant": "#cdc5bc",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#f5decd",
+            "background": "#fbf9f6",
+            "inverse-surface": "#30312f",
+            "surface-tint": "#615e5a",
+            "on-secondary-container": "#706051",
+            "tertiary-fixed-dim": "#e9c349",
+            "surface-container-highest": "#e4e2df",
+            "on-background": "#1b1c1a",
+            "primary-fixed-dim": "#cbc5c0",
+            "surface-bright": "#fbf9f6",
+            "on-tertiary": "#ffffff",
+            "tertiary": "#735c00",
+            "on-tertiary-container": "#4f3e00",
+            "primary-container": "#1d1b18",
+            "inverse-on-surface": "#f2f0ed"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin": "1.25rem",
+            "space-xs": "0.375rem",
+            "margin-desktop": "4rem",
+            "space-xl": "3.5rem",
+            "space-lg": "2rem",
+            "gutter-desktop": "2rem",
+            "gutter": "1rem",
+            "space-sm": "0.75rem",
+            "space-md": "1.25rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "headline-sm": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "display-lg-mobile": ["Playfair Display"]
+          },
+          "fontSize": {
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.16em", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "54px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.12em", "fontWeight": "600" }],
+            "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    .paper-shadow {
+      box-shadow: 0 12px 36px -4px rgba(28, 26, 23, 0.04), 0 4px 12px -2px rgba(140, 122, 107, 0.03);
+    }
+    .subtle-line {
+      background: linear-gradient(90deg, transparent, #cdc5bc, transparent);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Mobile Container Wrapper (~390px - 430px target) -->
+<div class="min-h-screen max-w-lg mx-auto bg-surface relative flex flex-col pb-28">
+<!-- TopAppBar (JSON execution) -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin py-space-xs max-w-lg mx-auto bg-surface/85 dark:bg-surface/85 backdrop-blur-md shadow-sm border-b border-outline-variant/30 dark:border-outline-variant/20">
+<!-- Leading Audio Controller -->
+<button aria-label="Audio player" class="flex items-center justify-center w-8 h-8 rounded-full text-primary dark:text-inverse-primary hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform duration-150" id="audio-toggle">
+<span class="material-symbols-outlined text-[19px]">music_note</span>
+</button>
+<!-- Center Headline / Monogram -->
+<div class="flex flex-col items-center">
+<span class="font-headline-md text-headline-md tracking-wider text-on-surface dark:text-inverse-on-surface uppercase font-bold">A &amp; M</span>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase -mt-1">The Celebration</span>
+</div>
+<!-- Trailing Itinerary / Guestbook Link -->
+<button aria-label="Book summary" class="flex items-center justify-center w-8 h-8 rounded-full text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-[19px]">menu_book</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-margin pt-20">
+<!-- Monogram Crest & Spiritual Opening Section -->
+<section class="text-center pt-6 pb-8">
+<!-- Botanical Vector Glyph -->
+<div class="flex justify-center items-center mb-4">
+<div class="h-px w-10 subtle-line"></div>
+<span class="mx-3 text-secondary text-sm">✦</span>
+<div class="h-px w-10 subtle-line"></div>
+</div>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em] mb-2">Bismillahir Rahmanir Rahim</p>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface italic font-normal mb-3">
+          The Two Souls
+        </h1>
+<!-- Scripture Quote Card -->
+<div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/40 mt-4 paper-shadow">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed italic">
+            “Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan... Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya.”
+          </p>
+<div class="mt-2 flex items-center justify-center gap-1.5">
+<span class="h-0.5 w-4 bg-tertiary-container/60"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">QS. Ar-Rum: 21</span>
+<span class="h-0.5 w-4 bg-tertiary-container/60"></span>
+</div>
+</div>
+</section>
+<!-- CHAPTER: THE GROOM -->
+<section class="mt-4 mb-space-xl">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 p-space-md paper-shadow">
+<!-- Editorial Label -->
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">The Groom</span>
+<span class="material-symbols-outlined text-outline-variant text-base">diamond</span>
+</div>
+<!-- Editorial Portrait Image -->
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-lg bg-surface-container mb-space-md border border-outline-variant/30">
+<img class="w-full h-full object-cover object-top" data-alt="An editorial fine art portrait of an Indonesian groom dressed in a minimalist bespoke dark charcoal tailored suit, standing in an architecturally refined modern studio bathed in soft diffused natural window daylight. Warm ivory wall textures, delicate organic floral shadows on the surface, quiet luxury aesthetic, editorial vogue monograph style with serene thoughtful gaze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeFonswWNiV_t4y2hTcaSKTX-aD-D-TNjeNULV2HNa_oPIzI56YkOZCsSOgBlrXm6noZIvvntXYq_tMxnRqhxWRFxBqx-1p0RTALfxMJfpkq1_pXWHPX907-HNzhkUs3XoIRDMowcc8pyXNraJfvsPY6i58JbpEYdwX3ZQK7YR_dz6lsJYpdeyvYKlZrBIB_ZZk5La_ajiUoCKd7BOHibJyokW11RMht23HXXB04MMm0uPTif96Ys"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent pointer-events-none"></div>
+</div>
+<!-- Groom Info -->
+<div class="text-center px-1">
+<h2 class="font-headline-md text-headline-md text-on-surface font-medium tracking-tight mb-1">
+              Arya Danendra, S.Ds.
+            </h2>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-3">
+              Creative Director &amp; Designer
+            </p>
+<div class="h-px w-12 subtle-line mx-auto mb-3"></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+              Putra pertama dari pasangan terkasih<br/>
+<strong class="font-medium text-on-surface">Bpk. Ir. Hendra</strong> &amp; <strong class="font-medium text-on-surface">Ibu Ratna</strong>
+</p>
+<!-- Instagram Action Button -->
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-outline-variant text-on-surface hover:bg-secondary-container/20 active:scale-95 transition-all duration-200" href="https://instagram.com/aryadanendra" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px] text-secondary">alternate_email</span>
+<span class="font-label-md text-label-md tracking-wider">aryadanendra</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ARTFUL BOTANICAL DIVIDER -->
+<div class="flex flex-col items-center justify-center my-6 space-y-2">
+<div class="flex items-center gap-3">
+<span class="h-px w-14 bg-outline-variant/60"></span>
+<span class="font-headline-sm text-headline-sm text-secondary italic font-normal">&amp;</span>
+<span class="h-px w-14 bg-outline-variant/60"></span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-[0.25em]">In Loving Union</span>
+</div>
+<!-- CHAPTER: THE BRIDE -->
+<section class="mt-4 mb-space-xl">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 p-space-md paper-shadow">
+<!-- Editorial Label -->
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">The Bride</span>
+<span class="material-symbols-outlined text-outline-variant text-base">favorite</span>
+</div>
+<!-- Editorial Portrait Image -->
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-lg bg-surface-container mb-space-md border border-outline-variant/30">
+<img class="w-full h-full object-cover object-top" data-alt="An editorial fine art portrait of an Indonesian bride in an elegant cream-toned modern couture bridal ensemble with delicate hand-woven botanical lace accents. Natural warm light cascading across a minimalist sculpted limestone studio, soft botanical olive branches in background, high fashion editorial composition, serene and poised expression with gentle warm ivory atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJljqKsAUiRcWyRq5uhkPqUp5Gw2JW7IV0UP644-XFxD3q9tbRvGfqJnqV_7kpm0r7qW7BvLB53gS89CC5G1DUEtIzhP_TjrThEZExBRINitzJvpBy-M63Mpea82OiFN6f9D8CYTdIcVYdtRV-1wjN999X3UzitF9GexeYxp1atEtj5zrIChyH85muuFRzX8mslMin6GvRQNTcjnLUS3a_XrL-t_AXYu1lwWSQrFjGJeg4lBT1MvE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent pointer-events-none"></div>
+</div>
+<!-- Bride Info -->
+<div class="text-center px-1">
+<h2 class="font-headline-md text-headline-md text-on-surface font-medium tracking-tight mb-1">
+              Maya Kirana, B.Arch.
+            </h2>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-3">
+              Interior Architect
+            </p>
+<div class="h-px w-12 subtle-line mx-auto mb-3"></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+              Putri kedua dari pasangan terkasih<br/>
+<strong class="font-medium text-on-surface">Bpk. Bambang</strong> &amp; <strong class="font-medium text-on-surface">Ibu Sri Wahyuni</strong>
+</p>
+<!-- Instagram Action Button -->
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-outline-variant text-on-surface hover:bg-secondary-container/20 active:scale-95 transition-all duration-200" href="https://instagram.com/mayakirana" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px] text-secondary">alternate_email</span>
+<span class="font-label-md text-label-md tracking-wider">mayakirana</span>
+</a>
+</div>
+</div>
+</section>
+<!-- CHAPTER: OUR LOVE STORY TIMELINE -->
+<section class="mt-8 mb-space-xl">
+<div class="text-center mb-6">
+<p class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em] mb-1">Chronicles</p>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-normal">Our Love Story</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">A serendipitous chapter across blueprints &amp; skylines</p>
+</div>
+<!-- Vertical Editorial Timeline Container -->
+<div class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-px before:bg-outline-variant/60">
+<!-- Milestone 1: 2018 -->
+<div class="relative group">
+<div class="absolute -left-[27px] top-1.5 w-3.5 h-3.5 rounded-full bg-surface border-2 border-secondary flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/40 paper-shadow">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase tracking-wider block mb-1">Autumn 2018</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">First Encounter</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Met unexpectedly during an architectural monograph exhibition in Bandung. A conversation on minimalist spatial typography turned into an endless evening coffee dialogue.
+              </p>
+</div>
+</div>
+<!-- Milestone 2: 2022 -->
+<div class="relative group">
+<div class="absolute -left-[27px] top-1.5 w-3.5 h-3.5 rounded-full bg-surface border-2 border-secondary flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-secondary"></div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/40 paper-shadow">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase tracking-wider block mb-1">Spring 2022</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Building Dreams &amp; Wandering</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Co-founded our collaborative design atelier. Navigated endless design projects, shared road trips across East Java, and realized our shared vision of life and craft.
+              </p>
+</div>
+</div>
+<!-- Milestone 3: 2025 -->
+<div class="relative group">
+<div class="absolute -left-[27px] top-1.5 w-3.5 h-3.5 rounded-full bg-surface border-2 border-primary flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+</div>
+<div class="bg-surface-container-low p-4 rounded-xl border border-outline-variant/40 paper-shadow">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase tracking-wider block mb-1">May 2025</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">She Said Yes at Lake Como</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                Under the tranquil golden hour overlooking the historic shores of Varenna, Arya knelt, and Maya said yes with tears of gratitude.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CHAPTER: CHERISHED MOMENTS (PHOTO GRID) -->
+<section class="mt-4 mb-space-xl">
+<div class="flex items-center justify-between mb-4">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Visual Diary</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Moments of Grace</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">3 Frames</span>
+</div>
+<!-- Bento Asymmetric Photo Grid -->
+<div class="grid grid-cols-2 gap-3">
+<div class="col-span-2 relative aspect-[16/9] rounded-xl overflow-hidden border border-outline-variant/40 paper-shadow">
+<img class="w-full h-full object-cover" data-alt="A candid romantic moment of the bride and groom laughing together in an open architectural terrace overlooking scenic Italian hills during golden hour. Editorial warm sunlight, soft beige linen textiles, quiet organic luxury tone, modern fine art photography styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAU5aqf-zwfh-QMb7Z9VJzt6IKRl0iKFtgMUkVVrTwawUgYel9y9tFr6DTaYAHmfoDw9uLrKTvwY6lNJgxOPOmq6cYkRBkTvup0JdtNirfWmV8Uzpqn3-VickXdOf7jK5yW7oecbiqwKJLraGo2QFKgLken10aTwjSoWReKQc5GvBCLN9YO5I_bSRkCcDlTXOjrEyat41FHDTu1LW9AwlnAfiQhBDvd0mPlESPovEr_2XxXMr-xzAk"/>
+<div class="absolute bottom-2 left-3 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded text-[10px] font-label-sm uppercase tracking-widest text-on-surface">
+              Varenna, Italy — 2025
+            </div>
+</div>
+<div class="relative aspect-square rounded-xl overflow-hidden border border-outline-variant/40 paper-shadow">
+<img class="w-full h-full object-cover" data-alt="Close up black and white fine art editorial portrait of the couple holding hands, highlighting a minimalist delicate engagement ring against woven bespoke textured linen. Soft directional daylight, quiet sophistication, artistic depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRziPn0ZiRXd7FBFyyWeH_oxEiq2IgJGhW-iSB8Y1s1dfixPsPkeSsuvu4pZk40ovVqWVbAc058G2J7lvucuJkwm9igIdssrWdffGRGw1x3LM6DUYDawt621rwbEY9Km5A8UzjdnxJsYjz4cQc2awzW8RWGkN1QOBKhCE_Fvc9o8qaCO32Orm6NzyDQfCso432EdY2CxuXoGqPmQ7-Fyt5DlmFxeYNd7JyKZPv0LVh6YTRNIRhabQ"/>
+<div class="absolute bottom-2 left-2 bg-surface/90 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-label-sm uppercase tracking-wider text-on-surface">
+              Promise
+            </div>
+</div>
+<div class="relative aspect-square rounded-xl overflow-hidden border border-outline-variant/40 paper-shadow">
+<img class="w-full h-full object-cover" data-alt="Editorial candid snapshot of the bride and groom studying architectural plans inside a warm sunlit design atelier studio with books, ceramics, and warm wooden interior elements. Natural candid aesthetic, warm ivory and earth tone color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClklgsnEiwHrBZu-Jv5pD5YnZQhfkWHuoSrbne298Th85qm7XYsr7rKuRkE2_NeqViRTZxt44bmQjS58i7iW4SabhziM-c9EMakxEAG5jX33nk6INWzjh9XRDzBE4ty3pUP9Ee2Yj3_ikxlz6XpxqPUZ8HrlceBGUB2kz8jC9tEE-xErhkYCUXyuAe0zOg0jNHgSSJq56yISIz88Z3ckiKOwVeScJnVaqhioZ1M-fc4v6W2Ufh-BM"/>
+<div class="absolute bottom-2 left-2 bg-surface/90 backdrop-blur-md px-2 py-0.5 rounded text-[9px] font-label-sm uppercase tracking-wider text-on-surface">
+              Studio At Work
+            </div>
+</div>
+</div>
+</section>
+<!-- GENTLE FOOTNOTE -->
+<div class="text-center py-6 text-on-surface-variant/70 border-t border-outline-variant/30">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] block mb-1">With Pure Intention &amp; Love</span>
+<p class="font-headline-sm text-headline-sm text-on-surface italic font-normal">Arya &amp; Maya</p>
+</div>
+</main>
+<!-- BottomNavBar (JSON execution with 'Couple' highlighted) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-xs py-space-xs max-w-lg mx-auto pb-safe bg-surface/90 dark:bg-surface/90 backdrop-blur-lg shadow-md border-t border-outline-variant/30 dark:border-outline-variant/20">
+<!-- Destination 1: Cover -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-on-surface-variant/70 py-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform duration-150" href="#cover">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+<span class="font-label-sm text-label-sm mt-0.5">Cover</span>
+</a>
+<!-- Destination 2: Couple (ACTIVE STATE based on Intent & Subject) -->
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-semibold py-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform duration-150" href="#couple">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">diamond</span>
+<span class="font-label-sm text-label-sm mt-0.5 text-primary">Couple</span>
+</a>
+<!-- Destination 3: Events -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-on-surface-variant/70 py-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform duration-150" href="#events">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+<span class="font-label-sm text-label-sm mt-0.5">Events</span>
+</a>
+<!-- Destination 4: Story -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-on-surface-variant/70 py-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform duration-150" href="#story">
+<span class="material-symbols-outlined text-[20px]">photo_library</span>
+<span class="font-label-sm text-label-sm mt-0.5">Story</span>
+</a>
+<!-- Destination 5: RSVP -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-on-surface-variant/70 py-1 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 active:scale-95 transition-transform duration-150" href="#rsvp">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<span class="font-label-sm text-label-sm mt-0.5">RSVP</span>
+</a>
+</nav>
+</div>
+<!-- Audio Toggle Micro-interaction -->
+<script>
+    const audioBtn = document.getElementById('audio-toggle');
+    let isPlaying = false;
+    audioBtn.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      const icon = audioBtn.querySelector('.material-symbols-outlined');
+      if (isPlaying) {
+        icon.textContent = 'volume_up';
+        icon.classList.add('text-tertiary');
+      } else {
+        icon.textContent = 'music_note';
+        icon.classList.remove('text-tertiary');
+      }
+    });
+  </script>
+</body></html>

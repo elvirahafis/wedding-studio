@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WeddingStudio CMS — Theme Editor &amp; Invitation Customizer</title>
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@500;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CMS Custom Styles -->
+  <link rel="stylesheet" href="css/cms.css"/>
+</head>
+<body class="bg-slate-900 text-slate-100 flex flex-col h-screen overflow-hidden">
+
+  <!-- =========================================================================
+       TOP HEADER TOOLBAR
+       ========================================================================= -->
+  <header class="h-14 bg-slate-800 border-b border-slate-700 px-4 flex items-center justify-between z-30 shrink-0">
+    <!-- Brand / Title -->
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white shadow-md">
+          <span class="material-symbols-outlined text-[20px]">brush</span>
+        </div>
+        <div>
+          <h1 class="text-sm font-bold tracking-tight text-white flex items-center gap-2">
+            WeddingStudio CMS
+            <span class="text-[10px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 font-semibold border border-blue-500/30">Theme Editor</span>
+          </h1>
+          <p class="text-[10px] text-slate-400">Atur warna, teks, foto, lokasi &amp; ekspor siap jual</p>
+        </div>
+      </div>
+      <span id="autosave-indicator" class="text-[11px] text-emerald-400 font-medium ml-4 hidden sm:inline"></span>
+    </div>
+
+    <!-- Center: Device Switcher -->
+    <div class="flex items-center bg-slate-900 p-1 rounded-lg border border-slate-700">
+      <button data-device="mobile" class="device-btn px-3 py-1 rounded text-xs font-medium flex items-center gap-1.5 bg-blue-600 text-white transition-all">
+        <span class="material-symbols-outlined text-[16px]">smartphone</span>
+        <span class="hidden md:inline">Mobile (390px)</span>
+      </button>
+      <button data-device="tablet" class="device-btn px-3 py-1 rounded text-xs font-medium flex items-center gap-1.5 text-slate-300 hover:text-white transition-all">
+        <span class="material-symbols-outlined text-[16px]">tablet</span>
+        <span class="hidden md:inline">Tablet</span>
+      </button>
+      <button data-device="desktop" class="device-btn px-3 py-1 rounded text-xs font-medium flex items-center gap-1.5 text-slate-300 hover:text-white transition-all">
+        <span class="material-symbols-outlined text-[16px]">desktop_windows</span>
+        <span class="hidden md:inline">Desktop</span>
+      </button>
+    </div>
+
+    <!-- Right Actions -->
+    <div class="flex items-center gap-2">
+      <a href="index.html" target="_blank" class="px-3 py-1.5 bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all">
+        <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+        <span class="hidden sm:inline">Lihat Web</span>
+      </a>
+      <button id="btn-export-html" class="px-3.5 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-semibold flex items-center gap-1.5 shadow-sm transition-all active:scale-95">
+        <span class="material-symbols-outlined text-[16px]">download</span>
+        <span>Unduh Jadi (HTML)</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       STUDIO WORKSPACE (2 PANELS: CONTROLS & LIVE PREVIEW)
+       ========================================================================= -->
+  <div class="studio-layout flex-1 flex overflow-hidden">
+
+    <!-- =======================================================================
+         LEFT: SIDEBAR NAVIGATION & SETTINGS PANELS
+         ======================================================================= -->
+    <aside class="w-full md:w-[480px] lg:w-[520px] bg-slate-800/95 border-r border-slate-700 flex flex-col shrink-0 overflow-hidden">
+      <!-- Tabs Icon Bar -->
+      <nav class="flex border-b border-slate-700 bg-slate-900/60 overflow-x-auto no-scrollbar shrink-0 px-2 py-1.5 gap-1">
+        <button data-tab="tab-theme" class="nav-tab-btn active px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white whitespace-nowrap flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">palette</span>
+          <span>Tema &amp; Warna</span>
+        </button>
+        <button data-tab="tab-couple" class="nav-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white whitespace-nowrap flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">favorite</span>
+          <span>Mempelai</span>
+        </button>
+        <button data-tab="tab-events" class="nav-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white whitespace-nowrap flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+          <span>Acara</span>
+        </button>
+        <button data-tab="tab-location" class="nav-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white whitespace-nowrap flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">pin_drop</span>
+          <span>Lokasi</span>
+        </button>
+        <button data-tab="tab-story-gallery" class="nav-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white whitespace-nowrap flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">photo_library</span>
+          <span>Kisah &amp; Foto</span>
+        </button>
+        <button data-tab="tab-gifts" class="nav-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white whitespace-nowrap flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">redeem</span>
+          <span>Amplop &amp; Bank</span>
+        </button>
+        <button data-tab="tab-music" class="nav-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white whitespace-nowrap flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">music_note</span>
+          <span>Musik</span>
+        </button>
+        <button data-tab="tab-rsvp" class="nav-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white whitespace-nowrap flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">mail</span>
+          <span>Data RSVP</span>
+        </button>
+        <button data-tab="tab-guest-generator" class="nav-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium text-emerald-400 hover:text-emerald-300 whitespace-nowrap flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">share</span>
+          <span>Generator Tamu</span>
+        </button>
+        <button data-tab="tab-backup" class="nav-tab-btn px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white whitespace-nowrap flex items-center gap-1.5">
+          <span class="material-symbols-outlined text-[16px]">settings_backup_restore</span>
+          <span>Backup JSON</span>
+        </button>
+      </nav>
+
+      <!-- Panel Scrollable Body -->
+      <div class="flex-1 overflow-y-auto cms-scroll p-4 space-y-6">
+
+        <!-- ===================================================================
+             PANEL 1: TEMA & WARNA (THEMES & STYLING)
+             =================================================================== -->
+        <section id="tab-theme" class="cms-panel-section space-y-5">
+          <!-- Preset Themes Section -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <h2 class="text-xs font-bold uppercase tracking-wider text-slate-200 flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-amber-400 text-[18px]">auto_awesome</span>
+                Preset Tema Siap Pakai (1-Klik)
+              </h2>
+            </div>
+            <p class="text-xs text-slate-400 mb-2.5">Pilih tema palet adat nusantara atau modern untuk mengubah keseluruhan nuansa &amp; lambang visual undangan secara instan.</p>
+
+            <!-- Category Filter Tabs -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-1 p-1 bg-slate-900/90 rounded-lg border border-slate-700/80 mb-2.5 text-[11px]">
+              <button type="button" onclick="setPresetCategoryFilter('all')" id="preset-filter-all" class="preset-filter-btn py-1.5 px-2 rounded-md font-medium text-center transition-all bg-blue-600 text-white shadow">
+                Semua (19)
+              </button>
+              <button type="button" onclick="setPresetCategoryFilter('nusantara')" id="preset-filter-nusantara" class="preset-filter-btn py-1.5 px-2 rounded-md font-medium text-center transition-all text-slate-300 hover:text-white hover:bg-slate-800 flex items-center justify-center gap-1">
+                <span>🇮🇩 Nusantara</span>
+                <span class="text-[9px] px-1 py-0.2 bg-amber-500/20 text-amber-300 rounded font-semibold border border-amber-500/30">9</span>
+              </button>
+              <button type="button" onclick="setPresetCategoryFilter('modern')" id="preset-filter-modern" class="preset-filter-btn py-1.5 px-2 rounded-md font-medium text-center transition-all text-slate-300 hover:text-white hover:bg-slate-800 flex items-center justify-center gap-1">
+                <span>✨ Modern</span>
+                <span class="text-[9px] px-1 py-0.2 bg-blue-500/20 text-blue-300 rounded font-semibold border border-blue-500/30">6</span>
+              </button>
+              <button type="button" onclick="setPresetCategoryFilter('destination')" id="preset-filter-destination" class="preset-filter-btn py-1.5 px-2 rounded-md font-medium text-center transition-all text-slate-300 hover:text-white hover:bg-slate-800 flex items-center justify-center gap-1">
+                <span>🏝️ Alam/Pantai</span>
+                <span class="text-[9px] px-1 py-0.2 bg-teal-500/20 text-teal-300 rounded font-semibold border border-teal-500/30">2</span>
+              </button>
+              <button type="button" onclick="setPresetCategoryFilter('religi')" id="preset-filter-religi" class="preset-filter-btn col-span-2 sm:col-span-1 py-1.5 px-2 rounded-md font-medium text-center transition-all text-slate-300 hover:text-white hover:bg-slate-800 flex items-center justify-center gap-1">
+                <span>🕌 Religi/Kultur</span>
+                <span class="text-[9px] px-1 py-0.2 bg-purple-500/20 text-purple-300 rounded font-semibold border border-purple-500/30">2</span>
+              </button>
+            </div>
+
+            <!-- Instant Search Input -->
+            <div class="relative mb-3">
+              <input type="text" id="preset-search-input" oninput="searchPresetThemes(this.value)" placeholder="Cari tema (cth: jawa, sunda, pantai, islami)..." class="cms-input pl-8 text-xs py-1.5"/>
+              <span class="material-symbols-outlined absolute left-2.5 top-2 text-slate-400 text-[16px]">search</span>
+            </div>
+
+            <div id="preset-themes-container" class="grid grid-cols-2 gap-2.5">
+              <!-- Dynamically populated by cms.js -->
+            </div>
+          </div>
+
+          <div class="border-t border-slate-700/80 pt-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">Custom Palet Warna</h3>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="cms-label">Warna Utama (Primary)</label>
+                <div class="color-picker-wrapper">
+                  <input type="color" id="color-primary"/>
+                  <input type="text" id="hex-primary" class="cms-input text-xs font-mono"/>
+                </div>
+              </div>
+              <div>
+                <label class="cms-label">Warna Teks Tombol</label>
+                <div class="color-picker-wrapper">
+                  <input type="color" id="color-on-primary"/>
+                  <input type="text" id="hex-on-primary" class="cms-input text-xs font-mono"/>
+                </div>
+              </div>
+              <div>
+                <label class="cms-label">Warna Sekunder (Muted Taupe)</label>
+                <div class="color-picker-wrapper">
+                  <input type="color" id="color-secondary"/>
+                  <input type="text" id="hex-secondary" class="cms-input text-xs font-mono"/>
+                </div>
+              </div>
+              <div>
+                <label class="cms-label">Warna Aksen Emas (Tertiary)</label>
+                <div class="color-picker-wrapper">
+                  <input type="color" id="color-tertiary"/>
+                  <input type="text" id="hex-tertiary" class="cms-input text-xs font-mono"/>
+                </div>
+              </div>
+              <div>
+                <label class="cms-label">Warna Background Web</label>
+                <div class="color-picker-wrapper">
+                  <input type="color" id="color-background"/>
+                  <input type="text" id="hex-background" class="cms-input text-xs font-mono"/>
+                </div>
+              </div>
+              <div>
+                <label class="cms-label">Warna Kartu / Surface</label>
+                <div class="color-picker-wrapper">
+                  <input type="color" id="color-surface"/>
+                  <input type="text" id="hex-surface" class="cms-input text-xs font-mono"/>
+                </div>
+              </div>
+              <div>
+                <label class="cms-label">Warna Surface Container</label>
+                <div class="color-picker-wrapper">
+                  <input type="color" id="color-surface-container"/>
+                  <input type="text" id="hex-surface-container" class="cms-input text-xs font-mono"/>
+                </div>
+              </div>
+              <div>
+                <label class="cms-label">Warna Garis Border (Outline)</label>
+                <div class="color-picker-wrapper">
+                  <input type="color" id="color-outline"/>
+                  <input type="text" id="hex-outline" class="cms-input text-xs font-mono"/>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Typography Section -->
+          <div class="border-t border-slate-700/80 pt-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">Tipografi / Font Pasangan</h3>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="cms-label">Font Judul (Heading)</label>
+                <select id="font-heading-select" class="cms-input">
+                  <option value="Playfair Display">Playfair Display (Editorial)</option>
+                  <option value="Cinzel">Cinzel (Royal &amp; Classic)</option>
+                  <option value="Cormorant Garamond">Cormorant Garamond (Fine Art)</option>
+                  <option value="Great Vibes">Great Vibes (Romantic Script)</option>
+                </select>
+              </div>
+              <div>
+                <label class="cms-label">Font Isi (Body)</label>
+                <select id="font-body-select" class="cms-input">
+                  <option value="Plus Jakarta Sans">Plus Jakarta Sans (Modern Clean)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cultural Ornament Style -->
+          <div class="border-t border-slate-700/80 pt-4">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-2 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-amber-400 text-[18px]">interests</span>
+              <span>Gaya Ornamen &amp; Motif Budaya</span>
+            </h3>
+            <p class="text-xs text-slate-400 mb-2.5">Mengubah stempel wax seal cover amplop, divider seksi, dan lambang visual undangan sesuai budaya pilihan.</p>
+            <div>
+              <select id="ornament-style-select" class="cms-input">
+                <optgroup label="🇮🇩 Adat Nusantara">
+                  <option value="jawa">🏛️ Adat Jawa (Gunungan Wayang &amp; Keraton)</option>
+                  <option value="sunda">👑 Adat Sunda (Mahkota Siger &amp; Ronce Melati)</option>
+                  <option value="minang">🏰 Adat Minangkabau (Rumah Gadang &amp; Pucuk Rebung)</option>
+                  <option value="batak">🛡️ Adat Batak (Gorga &amp; Ulos Tenun Ragi Hotang)</option>
+                  <option value="bali">🌺 Adat Bali (Payas Agung &amp; Gelungan Kencana)</option>
+                  <option value="bugis">💎 Adat Bugis (Saloko Emas &amp; Sutera Lagosi)</option>
+                  <option value="melayu">⚜️ Adat Melayu (Selembayung &amp; Songket Deli)</option>
+                </optgroup>
+                <optgroup label="✨ Modern &amp; Editorial">
+                  <option value="botanical">🌿 Modern Botanical (Olive Sprig &amp; Flora)</option>
+                  <option value="minimal">Minimalist Geometric (Haute Couture)</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             PANEL 2: MEMPELAI & PASANGAN (COUPLE)
+             =================================================================== -->
+        <section id="tab-couple" class="cms-panel-section hidden space-y-5">
+          <!-- Monogram & Hero Title -->
+          <div class="space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Judul Cover &amp; Monogram</h3>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="cms-label">Inisial Monogram</label>
+                <input type="text" id="hero-monogram-input" class="cms-input" placeholder="A &amp; M"/>
+              </div>
+              <div>
+                <label class="cms-label">Superheader Label</label>
+                <input type="text" id="hero-superheader-input" class="cms-input" placeholder="Private Nuptials"/>
+              </div>
+              <div class="col-span-2">
+                <label class="cms-label">Nama Pasangan (Judul Utama)</label>
+                <input type="text" id="hero-title-input" class="cms-input" placeholder="Arya &amp; Maya"/>
+              </div>
+              <div class="col-span-2">
+                <label class="cms-label">Tanggal &amp; Tempat Singkat</label>
+                <input type="text" id="hero-date-location-input" class="cms-input" placeholder="Sabtu, 24 Oktober 2026 • Uluwatu, Bali"/>
+              </div>
+            </div>
+
+            <!-- Hero Cover Photo -->
+            <div>
+              <label class="cms-label">Foto Utama Cover (Hero)</label>
+              <div class="space-y-2">
+                <input type="text" id="hero-cover-url-input" class="cms-input text-xs" placeholder="Tempel URL Foto Hero..."/>
+                <div class="flex items-center gap-2">
+                  <label class="cursor-pointer px-3 py-1.5 bg-slate-700 hover:bg-slate-600 rounded text-xs font-semibold text-slate-200 flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[16px]">upload_file</span>
+                    <span>Upload Foto Cover</span>
+                    <input type="file" id="hero-cover-file-input" accept="image/*" class="hidden"/>
+                  </label>
+                  <span class="text-[11px] text-slate-400">JPG/PNG/WebP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mempelai Pria (Groom) -->
+          <div class="border-t border-slate-700/80 pt-4 space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-blue-400 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">man</span>
+              Data Mempelai Pria (The Groom)
+            </h3>
+            <div>
+              <label class="cms-label">Nama Lengkap &amp; Gelar</label>
+              <input type="text" id="groom-name-input" class="cms-input" placeholder="Arya Danendra, S.Ds."/>
+            </div>
+            <div>
+              <label class="cms-label">Profesi / Peran</label>
+              <input type="text" id="groom-role-input" class="cms-input" placeholder="Creative Director &amp; Designer"/>
+            </div>
+            <div>
+              <label class="cms-label">Nama Orang Tua</label>
+              <textarea id="groom-parents-input" rows="2" class="cms-input resize-none" placeholder="Putra pertama dari pasangan terkasih Bpk. Ir. Hendra &amp; Ibu Ratna"></textarea>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="cms-label">Username Instagram</label>
+                <input type="text" id="groom-ig-input" class="cms-input" placeholder="aryadanendra"/>
+              </div>
+              <div>
+                <label class="cms-label">Foto Profil Pria</label>
+                <label class="cursor-pointer block text-center px-3 py-2 bg-slate-700 hover:bg-slate-600 rounded text-xs font-semibold text-slate-200">
+                  Upload Foto
+                  <input type="file" id="groom-photo-file-input" accept="image/*" class="hidden"/>
+                </label>
+              </div>
+            </div>
+            <input type="text" id="groom-photo-url-input" class="cms-input text-xs" placeholder="URL Foto Profil Groom"/>
+          </div>
+
+          <!-- Mempelai Wanita (Bride) -->
+          <div class="border-t border-slate-700/80 pt-4 space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-pink-400 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">woman</span>
+              Data Mempelai Wanita (The Bride)
+            </h3>
+            <div>
+              <label class="cms-label">Nama Lengkap &amp; Gelar</label>
+              <input type="text" id="bride-name-input" class="cms-input" placeholder="Maya Kirana, B.Arch."/>
+            </div>
+            <div>
+              <label class="cms-label">Profesi / Peran</label>
+              <input type="text" id="bride-role-input" class="cms-input" placeholder="Interior Architect"/>
+            </div>
+            <div>
+              <label class="cms-label">Nama Orang Tua</label>
+              <textarea id="bride-parents-input" rows="2" class="cms-input resize-none" placeholder="Putri kedua dari pasangan terkasih Bpk. Bambang &amp; Ibu Sri Wahyuni"></textarea>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="cms-label">Username Instagram</label>
+                <input type="text" id="bride-ig-input" class="cms-input" placeholder="mayakirana"/>
+              </div>
+              <div>
+                <label class="cms-label">Foto Profil Wanita</label>
+                <label class="cursor-pointer block text-center px-3 py-2 bg-slate-700 hover:bg-slate-600 rounded text-xs font-semibold text-slate-200">
+                  Upload Foto
+                  <input type="file" id="bride-photo-file-input" accept="image/*" class="hidden"/>
+                </label>
+              </div>
+            </div>
+            <input type="text" id="bride-photo-url-input" class="cms-input text-xs" placeholder="URL Foto Profil Bride"/>
+          </div>
+
+          <!-- Ayat Suci / Kutipan -->
+          <div class="border-t border-slate-700/80 pt-4 space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Kutipan / Ayat Suci</h3>
+            <div>
+              <label class="cms-label">Judul Kutipan</label>
+              <input type="text" id="quote-title-input" class="cms-input" placeholder="The Two Souls"/>
+            </div>
+            <div>
+              <label class="cms-label">Teks Arab (Opsional)</label>
+              <textarea id="quote-arabic-input" rows="2" class="cms-input resize-none font-serif text-right" placeholder="وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم..."></textarea>
+            </div>
+            <div>
+              <label class="cms-label">Terjemahan / Puisi</label>
+              <textarea id="quote-translation-input" rows="3" class="cms-input resize-none" placeholder="Dan di antara tanda-tanda kebesaran-Nya..."></textarea>
+            </div>
+            <div>
+              <label class="cms-label">Sumber Kutipan</label>
+              <input type="text" id="quote-source-input" class="cms-input" placeholder="QS. Ar-Rum: 21"/>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             PANEL 3: ACARA & JADWAL (EVENTS)
+             =================================================================== -->
+        <section id="tab-events" class="cms-panel-section hidden space-y-5">
+          <!-- Countdown Target -->
+          <div class="p-3 bg-slate-800/80 rounded-lg border border-slate-700">
+            <label class="cms-label">Target Hitung Mundur (Countdown Date &amp; Time)</label>
+            <input type="datetime-local" id="countdown-target-input" class="cms-input"/>
+            <span class="text-[11px] text-slate-400 mt-1 block">Waktu ini akan menjadi acuan hari, jam, menit, detik pada timer.</span>
+          </div>
+
+          <!-- Sesi 1: Akad Nikah -->
+          <div class="p-3.5 bg-slate-800/90 rounded-lg border border-slate-700 space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">schedule</span>
+              Acara 1 (Akad Nikah / Pemberkatan)
+            </h3>
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="cms-label">Tag Sesi</label>
+                <input type="text" id="e1-tag-input" class="cms-input" placeholder="Sesi Pagi"/>
+              </div>
+              <div>
+                <label class="cms-label">Judul Acara</label>
+                <input type="text" id="e1-title-input" class="cms-input" placeholder="Akad Nikah"/>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="cms-label">Hari &amp; Tanggal</label>
+                <input type="text" id="e1-date-input" class="cms-input" placeholder="Sabtu, 24 Oktober 2026"/>
+              </div>
+              <div>
+                <label class="cms-label">Waktu / Jam</label>
+                <input type="text" id="e1-time-input" class="cms-input" placeholder="08:30 - 10:30 WITA"/>
+              </div>
+            </div>
+            <div>
+              <label class="cms-label">Subtitle Acara</label>
+              <input type="text" id="e1-subtitle-input" class="cms-input" placeholder="The Holy Matrimony"/>
+            </div>
+            <div>
+              <label class="cms-label">Nama Tempat (Venue)</label>
+              <input type="text" id="e1-venue-input" class="cms-input" placeholder="The Glass House, Tirtha Uluwatu"/>
+            </div>
+            <div>
+              <label class="cms-label">Alamat Lengkap</label>
+              <textarea id="e1-address-input" rows="2" class="cms-input resize-none" placeholder="Jl. Uluwatu Banjar Dinas Karang Boma, Pecatu, Bali"></textarea>
+            </div>
+            <div>
+              <label class="cms-label">Dresscode Acara 1</label>
+              <input type="text" id="e1-dresscode-input" class="cms-input" placeholder="Traditional White / Earthy Taupe"/>
+            </div>
+            <div>
+              <label class="cms-label">Link Google Maps Acara 1</label>
+              <input type="text" id="e1-maps-url-input" class="cms-input" placeholder="https://maps.google.com/?q=..."/>
+            </div>
+          </div>
+
+          <!-- Sesi 2: Resepsi Pernikahan -->
+          <div class="p-3.5 bg-slate-800/90 rounded-lg border border-slate-700 space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-pink-400 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">redeem</span>
+              Acara 2 (Resepsi / Evening Party)
+            </h3>
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="cms-label">Tag Sesi</label>
+                <input type="text" id="e2-tag-input" class="cms-input" placeholder="Sesi Senja &amp; Malam"/>
+              </div>
+              <div>
+                <label class="cms-label">Judul Acara</label>
+                <input type="text" id="e2-title-input" class="cms-input" placeholder="Resepsi Pernikahan"/>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="cms-label">Hari &amp; Tanggal</label>
+                <input type="text" id="e2-date-input" class="cms-input" placeholder="Sabtu, 24 Oktober 2026"/>
+              </div>
+              <div>
+                <label class="cms-label">Waktu / Jam</label>
+                <input type="text" id="e2-time-input" class="cms-input" placeholder="17:30 WITA - Selesai"/>
+              </div>
+            </div>
+            <div>
+              <label class="cms-label">Catatan Cocktail / Extra</label>
+              <input type="text" id="e2-cocktail-input" class="cms-input" placeholder="Sunset Cocktails &amp; Canapés (17:30 - 19:00)"/>
+            </div>
+            <div>
+              <label class="cms-label">Nama Tempat (Venue)</label>
+              <input type="text" id="e2-venue-input" class="cms-input" placeholder="Cliffside Amphitheater, Tirtha Uluwatu"/>
+            </div>
+            <div>
+              <label class="cms-label">Alamat Lengkap</label>
+              <textarea id="e2-address-input" rows="2" class="cms-input resize-none" placeholder="Overlooking the Indian Ocean cliff plateau"></textarea>
+            </div>
+            <div>
+              <label class="cms-label">Dresscode Acara 2</label>
+              <input type="text" id="e2-dresscode-input" class="cms-input" placeholder="Black Tie Optional / Formal Botanical Pastel"/>
+            </div>
+            <div>
+              <label class="cms-label">Link Google Maps Acara 2</label>
+              <input type="text" id="e2-maps-url-input" class="cms-input" placeholder="https://maps.google.com/?q=..."/>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             PANEL 4: LOKASI & PROTOKOL (LOCATION)
+             =================================================================== -->
+        <section id="tab-location" class="cms-panel-section hidden space-y-5">
+          <div class="space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Detail Lokasi &amp; Peta</h3>
+            <div>
+              <label class="cms-label">Nama Kompleks Venue</label>
+              <input type="text" id="loc-title-input" class="cms-input" placeholder="Tirtha Uluwatu, Bali"/>
+            </div>
+            <div>
+              <label class="cms-label">Deskripsi Akses Lokasi</label>
+              <textarea id="loc-desc-input" rows="2" class="cms-input resize-none" placeholder="Kompleks Tirtha Uluwatu bertengger di atas tebing..."></textarea>
+            </div>
+            <div>
+              <label class="cms-label">Koordinat GPS (Label)</label>
+              <input type="text" id="loc-coordinates-input" class="cms-input" placeholder="8.8471° S, 115.1105° E"/>
+            </div>
+            <div>
+              <label class="cms-label">Link Navigasi Google Maps</label>
+              <input type="text" id="loc-maps-nav-input" class="cms-input" placeholder="https://maps.google.com/?q=..."/>
+            </div>
+            <div>
+              <label class="cms-label">Foto Preview Lokasi</label>
+              <input type="text" id="loc-preview-url-input" class="cms-input text-xs mb-1.5" placeholder="URL Foto Lokasi..."/>
+              <label class="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-700 hover:bg-slate-600 rounded text-xs font-semibold text-slate-200">
+                <span class="material-symbols-outlined text-[16px]">upload_file</span>
+                <span>Upload Foto Lokasi</span>
+                <input type="file" id="loc-preview-file-input" accept="image/*" class="hidden"/>
+              </label>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-700/80 pt-4 space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Layanan Shuttle &amp; Parkir</h3>
+            <div>
+              <label class="cms-label">Judul Layanan</label>
+              <input type="text" id="loc-shuttle-title-input" class="cms-input" placeholder="Layanan Shuttle &amp; Parkir Valet"/>
+            </div>
+            <div>
+              <label class="cms-label">Keterangan Layanan</label>
+              <textarea id="loc-shuttle-desc-input" rows="2" class="cms-input resize-none" placeholder="Tersedia buggy shuttle dari area parkir utama..."></textarea>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-700/80 pt-4 space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Tata Tertib &amp; Protokol Tamu</h3>
+            <div id="etiquettes-editor-container" class="space-y-2">
+              <!-- Dynamically populated by cms.js -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             PANEL 5: KISAH CINTA & GALERI (STORY & GALLERY)
+             =================================================================== -->
+        <section id="tab-story-gallery" class="cms-panel-section hidden space-y-6">
+          <!-- Story Milestones -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Timeline Kisah Cinta (Love Story)</h3>
+              <button onclick="addMilestone()" class="px-2.5 py-1 bg-blue-600 hover:bg-blue-500 text-white rounded text-xs font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">add</span>
+                <span>Tambah Cerita</span>
+              </button>
+            </div>
+            <div id="milestones-editor-container" class="space-y-3">
+              <!-- Dynamically populated by cms.js -->
+            </div>
+          </div>
+
+          <!-- Photo Gallery -->
+          <div class="border-t border-slate-700/80 pt-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Galeri Foto (Moments of Grace)</h3>
+              <button onclick="addGalleryItem()" class="px-2.5 py-1 bg-blue-600 hover:bg-blue-500 text-white rounded text-xs font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">add</span>
+                <span>Tambah Foto</span>
+              </button>
+            </div>
+            <div id="gallery-editor-container" class="space-y-3">
+              <!-- Dynamically populated by cms.js -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             PANEL 6: REKENING & KADO DIGITAL (GIFTS & BANK)
+             =================================================================== -->
+        <section id="tab-gifts" class="cms-panel-section hidden space-y-5">
+          <div class="space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Pengantar Tanda Kasih</h3>
+            <div>
+              <label class="cms-label">Judul Seksi</label>
+              <input type="text" id="gifts-title-input" class="cms-input" placeholder="Tanda Kasih &amp; Amplop Digital"/>
+            </div>
+            <div>
+              <label class="cms-label">Kalimat Pengantar Sopan</label>
+              <textarea id="gifts-intro-input" rows="3" class="cms-input resize-none" placeholder="Doa restu Anda merupakan karunia terindah bagi kami..."></textarea>
+            </div>
+          </div>
+
+          <!-- Bank Accounts Manager -->
+          <div class="border-t border-slate-700/80 pt-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Daftar Rekening Bank (Tersedia Tombol Salin)</h3>
+              <button onclick="addBank()" class="px-2.5 py-1 bg-blue-600 hover:bg-blue-500 text-white rounded text-xs font-semibold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">add</span>
+                <span>Tambah Bank</span>
+              </button>
+            </div>
+            <div id="banks-editor-container" class="space-y-3">
+              <!-- Dynamically populated by cms.js -->
+            </div>
+          </div>
+
+          <!-- QRIS Image -->
+          <div class="border-t border-slate-700/80 pt-4 space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">QRIS Amplop Digital</h3>
+            <input type="text" id="qris-url-input" class="cms-input text-xs" placeholder="URL Gambar QRIS"/>
+            <label class="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-700 hover:bg-slate-600 rounded text-xs font-semibold text-slate-200">
+              <span class="material-symbols-outlined text-[16px]">upload_file</span>
+              <span>Upload Gambar QRIS</span>
+              <input type="file" id="qris-file-input" accept="image/*" class="hidden"/>
+            </label>
+          </div>
+
+          <!-- Physical Gift Address -->
+          <div class="border-t border-slate-700/80 pt-4 space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Alamat Pengiriman Kado Fisik</h3>
+            <div>
+              <label class="cms-label">Nama Penerima</label>
+              <input type="text" id="gift-recipient-input" class="cms-input" placeholder="Arya Danendra &amp; Maya Kirana"/>
+            </div>
+            <div>
+              <label class="cms-label">Alamat Lengkap</label>
+              <textarea id="gift-address-input" rows="2" class="cms-input resize-none" placeholder="Jl. Dharmawangsa Elok No. 18, Jakarta Selatan..."></textarea>
+            </div>
+            <div>
+              <label class="cms-label">Kontak Penerima</label>
+              <input type="text" id="gift-contact-input" class="cms-input" placeholder="0812-8890-1200 (Bpk. Danendra)"/>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             PANEL 7: MUSIK LATAR (BACKGROUND MUSIC)
+             =================================================================== -->
+        <section id="tab-music" class="cms-panel-section hidden space-y-5">
+          <div class="space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Pengaturan Audio Musik</h3>
+            <div>
+              <label class="cms-label">Pilih Musik Preset Romantis</label>
+              <select id="music-preset-select" class="cms-input">
+                <option value="">-- Pilih Lagu Preset --</option>
+                <optgroup label="🎋 Musik Tradisional Nusantara">
+                  <option value="https://actions.google.com/sounds/v1/instruments/asian_bamboo_flute.ogg">🎋 Suling Bambu &amp; Kecapi Tradisional (Romantis)</option>
+                  <option value="https://actions.google.com/sounds/v1/instruments/gong_chime_meditation.ogg">🔔 Gamelan &amp; Gong Kencana Sakral (Jawa / Bali)</option>
+                  <option value="https://actions.google.com/sounds/v1/instruments/harp_melody_romantic.ogg">✨ Talempong &amp; Petikan Kasih Tradisional</option>
+                </optgroup>
+                <optgroup label="🎻 Modern &amp; Klasik Romantis">
+                  <option value="https://actions.google.com/sounds/v1/instruments/soft_piano_melody.ogg">🎹 Clair de Lune (Piano Lembut)</option>
+                  <option value="https://actions.google.com/sounds/v1/instruments/slow_harp_arpeggio.ogg">🎻 Acoustic Romance (Harp &amp; Strings)</option>
+                  <option value="https://actions.google.com/sounds/v1/ambiences/gentle_stream_with_distant_birds.ogg">🍃 Nature Serenade (Botanical Ambient)</option>
+                </optgroup>
+              </select>
+            </div>
+            <div>
+              <label class="cms-label">Judul Lagu &amp; Artis (Tampil di Header)</label>
+              <input type="text" id="music-title-input" class="cms-input" placeholder="Clair de Lune"/>
+            </div>
+            <div>
+              <label class="cms-label">URL Audio MP3 Langsung</label>
+              <input type="text" id="music-url-input" class="cms-input text-xs" placeholder="https://domain.com/lagu-nikah.mp3"/>
+            </div>
+            <div>
+              <label class="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-700 hover:bg-slate-600 rounded text-xs font-semibold text-slate-200">
+                <span class="material-symbols-outlined text-[16px]">audio_file</span>
+                <span>Upload Audio Sendiri (MP3)</span>
+                <input type="file" id="music-file-input" accept="audio/*" class="hidden"/>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             PANEL 8: DATA RSVP & BUKU TAMU
+             =================================================================== -->
+        <section id="tab-rsvp" class="cms-panel-section hidden space-y-5">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Data RSVP Masuk</h3>
+              <div class="flex items-center gap-2 mt-1">
+                <span id="rsvp-total-badge" class="text-[11px] px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 font-semibold">3 Responden</span>
+                <span id="rsvp-hadir-badge" class="text-[11px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-semibold">3 Orang Hadir</span>
+              </div>
+            </div>
+            <button onclick="exportRsvpCsv()" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded text-xs font-semibold flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">table_chart</span>
+              <span>Export CSV</span>
+            </button>
+          </div>
+
+          <!-- RSVP Table -->
+          <div class="overflow-x-auto rounded-lg border border-slate-700 bg-slate-900/80">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-slate-700 bg-slate-800 text-[10px] uppercase tracking-wider text-slate-400">
+                  <th class="py-2.5 px-3">Nama Tamu</th>
+                  <th class="py-2.5 px-2">Status</th>
+                  <th class="py-2.5 px-2 text-center">Kursi</th>
+                  <th class="py-2.5 px-2">Catatan</th>
+                  <th class="py-2.5 px-2 text-right">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="rsvp-table-body">
+                <!-- Dynamically populated by cms.js -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Wishes Moderation -->
+          <div class="border-t border-slate-700/80 pt-4 space-y-3">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Moderasi Ucapan &amp; Doa Tamu</h3>
+            <div id="wishes-moderation-container" class="space-y-2.5">
+              <!-- Dynamically populated by cms.js -->
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             PANEL 9: GENERATOR LINK TAMU (SELLER KILLER FEATURE)
+             =================================================================== -->
+        <section id="tab-guest-generator" class="cms-panel-section hidden space-y-5">
+          <div class="p-3 bg-emerald-950/40 border border-emerald-800/60 rounded-xl space-y-1">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[18px]">verified</span>
+              Fitur Andalan Penjualan: Generator Link &amp; WhatsApp
+            </h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Buat ratusan link undangan personal untuk klien atau tamu dalam sekali klik, lengkap dengan format pesan siap kirim ke WhatsApp!
+            </p>
+          </div>
+
+          <div>
+            <label class="cms-label">Daftar Nama Tamu (1 Nama Per Baris)</label>
+            <textarea id="batch-guest-names" rows="5" class="cms-input resize-y font-mono text-xs" placeholder="Bapak Joko Widodo &amp; Keluarga&#10;Ibu Sri Mulyani&#10;Dimas Wicaksono &amp; Partner&#10;Sahabat SMA Arya"></textarea>
+          </div>
+
+          <div>
+            <label class="cms-label">Template Pesan WhatsApp</label>
+            <textarea id="wa-template-input" rows="4" class="cms-input resize-y text-xs" placeholder="Gunakan tag {nama}, {link}, {mempelai}">Kepada Yth. {nama},
+
+Tanpa mengurangi rasa hormat, perkenankan kami mengundang Anda untuk hadir dan memberikan doa restu di hari pernikahan kami:
+
+Buka Undangan:
+{link}
+
+Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Anda berkenan hadir.
+Terima kasih.
+
+Salam hangat,
+{mempelai}</textarea>
+            <span class="text-[10px] text-slate-400 mt-1 block">Variabel yang tersedia: <code class="text-blue-400">{nama}</code>, <code class="text-blue-400">{link}</code>, <code class="text-blue-400">{mempelai}</code></span>
+          </div>
+
+          <button id="btn-generate-links" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 shadow-md active:scale-98">
+            <span class="material-symbols-outlined text-[18px]">bolt</span>
+            <span>Generate Semua Link Undangan</span>
+          </button>
+
+          <!-- Generated Links Container -->
+          <div class="space-y-2 pt-2">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300">Hasil Link Tamu &amp; Tombol Kirim:</h4>
+            <div id="generated-links-results" class="space-y-2 max-h-80 overflow-y-auto cms-scroll pr-1">
+              <div class="text-xs text-slate-400 py-3 text-center">Masukkan nama tamu di atas lalu klik "Generate".</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             PANEL 10: BACKUP & EXPORT JSON
+             =================================================================== -->
+        <section id="tab-backup" class="cms-panel-section hidden space-y-5">
+          <div class="space-y-2">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200">Simpan &amp; Transfer Data Tema</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Anda bisa mendownload konfigurasi tema saat ini ke file JSON untuk disimpan per klien, atau mengupload file JSON klien lama untuk diedit kembali.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <button id="btn-export-json" class="p-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-center flex flex-col items-center justify-center gap-2 group transition-all">
+              <div class="w-10 h-10 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[22px]">file_download</span>
+              </div>
+              <span class="text-xs font-bold text-white">Download Config (JSON)</span>
+              <span class="text-[10px] text-slate-400">Simpan pengaturan tema</span>
+            </button>
+
+            <label class="cursor-pointer p-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-center flex flex-col items-center justify-center gap-2 group transition-all">
+              <div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-[22px]">upload_file</span>
+              </div>
+              <span class="text-xs font-bold text-white">Upload Config (JSON)</span>
+              <span class="text-[10px] text-slate-400">Pulihkan tema tersimpan</span>
+              <input type="file" id="import-json-file" accept=".json" class="hidden"/>
+            </label>
+          </div>
+
+          <div class="border-t border-slate-700/80 pt-4">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-red-400 mb-2">Reset Pengaturan</h4>
+            <p class="text-xs text-slate-400 mb-3">Kembalikan seluruh teks, warna, dan foto ke tema bawaan Botanical Editorial.</p>
+            <button id="btn-reset-default" class="px-4 py-2 bg-red-600/20 hover:bg-red-600/30 text-red-400 border border-red-500/30 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all">
+              <span class="material-symbols-outlined text-[16px]">restart_alt</span>
+              <span>Reset Semua ke Default Awal</span>
+            </button>
+          </div>
+        </section>
+
+      </div>
+    </aside>
+
+    <!-- =======================================================================
+         RIGHT: LIVE INTERACTIVE PREVIEW FRAME
+         ======================================================================= -->
+    <main class="flex-1 bg-slate-950 flex flex-col items-center justify-center relative overflow-hidden">
+      <!-- Mockup Device Wrapper (Default: Mobile) -->
+      <div id="device-container" class="device-wrapper device-mobile">
+        <iframe id="preview-frame" src="index.html" class="preview-iframe" title="Wedding Invitation Live Preview"></iframe>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Floating Toast Notification -->
+  <div id="cms-toast" class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white px-4 py-2.5 rounded-xl text-xs font-semibold shadow-2xl flex items-center gap-2 pointer-events-none">
+    Perubahan tersimpan!
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/wedding-data.js"></script>
+  <script src="js/cms.js"></script>
+</body>
+</html>

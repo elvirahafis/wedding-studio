@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>The Wedding of Arya & Maya</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Undangan Pernikahan Eksklusif Arya Danendra & Maya Kirana. Rayakan momen sakral awal perjalanan kami di Uluwatu, Bali." />
+  <meta property="og:title" content="The Wedding of Arya & Maya" />
+  <meta property="og:description" content="Private Nuptials • Sabtu, 24 Oktober 2026 • Uluwatu, Bali" />
+  
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "var(--color-primary)",
+            "on-primary": "var(--color-on-primary)",
+            secondary: "var(--color-secondary)",
+            tertiary: "var(--color-tertiary)",
+            background: "var(--color-background)",
+            surface: "var(--color-surface)",
+            "surface-container": "var(--color-surface-container)",
+            "surface-container-low": "var(--color-surface-container-low)",
+            "surface-container-lowest": "var(--color-surface-container-lowest)",
+            outline: "var(--color-outline)",
+            "outline-variant": "var(--color-outline-variant)",
+            "on-surface": "var(--color-on-surface)",
+            "on-surface-variant": "var(--color-on-surface-variant)"
+          },
+          fontFamily: {
+            heading: ["var(--font-heading)", "serif"],
+            body: ["var(--font-body)", "sans-serif"],
+            "headline-lg": ["Playfair Display", "serif"],
+            "display-lg": ["Playfair Display", "serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          spacing: {
+            margin: "1.25rem",
+            "space-xs": "0.375rem",
+            "space-sm": "0.75rem",
+            "space-md": "1.25rem",
+            "space-lg": "2rem",
+            "space-xl": "3.5rem"
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Wedding Styles -->
+  <link rel="stylesheet" href="css/wedding.css"/>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary/20 selection:text-primary">
+
+  <!-- =========================================================================
+       AUDIO ELEMENT
+       ========================================================================= -->
+  <audio id="bg-audio" loop preload="auto">
+    <source src="https://actions.google.com/sounds/v1/instruments/soft_piano_melody.ogg" type="audio/ogg"/>
+  </audio>
+
+  <!-- =========================================================================
+       LUXURY ENVELOPE CURTAIN / OPENING COVER SCREEN (OVERLAY)
+       ========================================================================= -->
+  <div id="envelope-curtain" class="fixed inset-0 z-[100] flex flex-col items-center justify-between p-6 bg-surface text-center overflow-y-auto no-scrollbar">
+    <!-- Top Monogram & Cultural Seal -->
+    <div class="pt-8 flex flex-col items-center">
+      <div class="relative flex h-24 w-24 flex-col items-center justify-center rounded-full border border-outline-variant bg-surface-container-low p-2 shadow-sm curtain-cultural-seal">
+        <div class="absolute inset-1.5 rounded-full border border-dashed border-outline-variant/60"></div>
+        <div id="curtain-ornament-badge" class="w-8 h-8 flex items-center justify-center text-tertiary mb-0.5"></div>
+        <span id="curtain-monogram" class="font-headline-lg text-xs text-secondary tracking-widest font-normal italic">a&m</span>
+      </div>
+      <div class="mt-3 flex items-center gap-1.5">
+        <span class="h-[1px] w-6 bg-secondary/40"></span>
+        <span id="curtain-cultural-badge" class="text-[10px] font-semibold text-secondary uppercase tracking-[0.25em]">Wedding Celebration</span>
+        <span class="h-[1px] w-6 bg-secondary/40"></span>
+      </div>
+    </div>
+
+    <!-- Center Couple Titles -->
+    <div class="my-auto py-6 max-w-sm w-full">
+      <h1 id="curtain-title" class="font-headline-lg text-4xl sm:text-5xl text-primary font-normal tracking-tight">
+        Arya &amp; Maya
+      </h1>
+      <p id="curtain-subtitle" class="mt-2 text-xs sm:text-sm text-on-surface-variant font-light tracking-wider">
+        Sabtu, 24 Oktober 2026 • Uluwatu, Bali
+      </p>
+
+      <!-- Guest Card Capsule -->
+      <div class="mt-8 bg-surface-container-lowest/95 border border-outline-variant/70 rounded-xl p-5 text-center paper-shadow backdrop-blur-sm">
+        <div class="mx-auto w-8 h-[1px] bg-secondary/50 mb-2"></div>
+        <span id="curtain-welcome-prefix" class="text-[11px] font-semibold text-secondary tracking-widest uppercase block mb-1">
+          Kepada Yth. Bapak/Ibu/Saudara/i
+        </span>
+        <h2 id="curtain-guest-name" class="font-headline-lg text-xl sm:text-2xl text-primary font-medium mb-2">
+          Dimas &amp; Partner
+        </h2>
+        <p id="curtain-welcome-msg" class="text-xs text-on-surface-variant leading-relaxed mb-4 px-2">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Anda berkenan hadir dan memberikan doa restu bagi langkah awal kami.
+        </p>
+
+        <!-- Luxury Wax Seal Open Button -->
+        <button id="open-invitation-btn" onclick="openInvitation()" class="wax-seal-pulse inline-flex items-center justify-center space-x-2.5 w-full bg-primary text-on-primary py-3.5 px-6 rounded-lg text-xs uppercase tracking-widest font-semibold hover:bg-black transition-all duration-200 active:scale-95 shadow-md group">
+          <span class="flex h-5 w-5 items-center justify-center rounded-full bg-tertiary/20 border border-tertiary text-tertiary text-[12px] group-hover:rotate-12 transition-transform">
+            <span class="material-symbols-outlined text-[13px] fill-1">favorite</span>
+          </span>
+          <span id="curtain-btn-text">Buka Undangan</span>
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Footer Copyright -->
+    <div class="pb-6">
+      <p class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/70">Arya &amp; Maya • Private Nuptials</p>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MAIN INVITATION WRAPPER (MOBILE VIEWPORT STANDARD ~430px CENTERED)
+       ========================================================================= -->
+  <div class="main-invitation-shell relative mx-auto min-h-screen max-w-lg bg-surface shadow-2xl pb-28">
+
+    <!-- Top Fixed App Bar -->
+    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin py-space-xs max-w-lg mx-auto bg-surface/85 backdrop-blur-md shadow-sm border-b border-outline-variant/30">
+      <!-- Audio Toggle Button -->
+      <button id="audio-toggle" aria-label="Toggle Audio" class="flex items-center gap-1.5 p-1 rounded-full text-primary hover:text-primary transition-all duration-200 active:scale-95">
+        <div id="disc-icon" class="music-spin music-paused flex items-center justify-center w-8 h-8 rounded-full bg-surface-container border border-outline-variant/60 text-secondary">
+          <span class="material-symbols-outlined text-[18px] music-icon">music_note</span>
+        </div>
+        <span id="music-track-title" class="hidden sm:inline text-[11px] uppercase tracking-wider text-on-surface-variant font-medium">
+          Clair de Lune
+        </span>
+      </button>
+
+      <!-- Center Monogram -->
+      <a href="#cover" class="flex items-center space-x-1.5">
+        <span id="header-cultural-emblem" class="w-4 h-4 text-tertiary inline-flex items-center justify-center"></span>
+        <span class="app-monogram font-headline-lg text-lg tracking-wider text-on-surface uppercase font-bold">A &amp; M</span>
+      </a>
+
+      <!-- Menu / Guide Link -->
+      <a href="#events" aria-label="Menu" class="flex h-8 w-8 items-center justify-center rounded-full text-secondary hover:text-primary transition-colors duration-200">
+        <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+      </a>
+    </header>
+
+    <!-- Main Content Flow -->
+    <main id="main-content" class="pt-20 px-margin flex flex-col items-center">
+
+      <!-- =====================================================================
+           SECTION 1: HERO COVER & COUNTDOWN
+           ===================================================================== -->
+      <section id="cover" class="w-full flex flex-col items-center text-center mt-4 mb-space-md scroll-mt-24">
+        <!-- Monogram Crest -->
+        <div class="relative flex h-16 w-16 items-center justify-center rounded-full border border-outline-variant/60 bg-surface-container-low p-2">
+          <div class="absolute inset-1 rounded-full border border-dashed border-outline-variant/40"></div>
+          <span class="app-monogram font-headline-lg text-xl text-secondary tracking-widest font-normal italic">a&amp;m</span>
+        </div>
+
+        <span id="hero-superheader" class="mt-4 text-[11px] font-semibold text-secondary uppercase tracking-[0.25em]">
+          Private Nuptials
+        </span>
+        <h1 id="hero-title" class="mt-2 font-headline-lg text-4xl text-primary tracking-tight font-normal">
+          Arya &amp; Maya
+        </h1>
+        <p id="hero-date-location" class="mt-1 text-xs sm:text-sm text-on-surface-variant font-light tracking-wide">
+          Sabtu, 24 Oktober 2026 • Uluwatu, Bali
+        </p>
+
+        <!-- Haute Couture Editorial Portrait Card -->
+        <div class="w-full mt-6 relative rounded-xl overflow-hidden border border-outline-variant/50 bg-surface-container paper-shadow">
+          <div class="aspect-[3/4] w-full relative overflow-hidden">
+            <img id="hero-cover-img" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF-Eo0OQoU-J8ClK-3T4foYAVuSZny6_Dgo6FNV7sGWN8_vAYSGOY-BQkT8EzbzWpiNPBHFNhNPKFg9YogKBeCa2WDHedT25mKtGYKVJq9BiDLrSz06Nf5wOvFmM9tPyO-m0ucxdsZGu3utqpaz4q1x3CJCT-Ia7qd_4ugawVaciWzaAKem7BRtFVqlZ0GtERaZZ1tgZl7hdAZPsC0OFza9hrFWKIeMgHZG2OHU4IZoUWeMf6wtNY" alt="Arya & Maya Wedding Cover"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent"></div>
+            <!-- Bottom Floating Badge -->
+            <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
+              <div class="text-left">
+                <span id="hero-badge-chapter" class="text-[10px] font-semibold text-tertiary uppercase tracking-widest block">Chapter One</span>
+                <span id="hero-badge-title" class="font-headline-lg text-lg text-white">The Sacred Union</span>
+              </div>
+              <span class="material-symbols-outlined text-tertiary text-[22px]">diamond</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personalized Welcome Pill -->
+        <div class="w-full mt-5 bg-surface-container-low border border-outline-variant/60 rounded-xl p-4 text-center paper-shadow">
+          <span class="text-[10px] font-semibold text-secondary tracking-widest uppercase block mb-1">Tamu Kehormatan</span>
+          <h2 id="welcome-guest-name" class="font-headline-lg text-lg text-primary mb-1">Dimas &amp; Partner</h2>
+          <p class="text-xs text-on-surface-variant leading-relaxed">
+            Kehadiran dan doa restu Anda adalah pelengkap sempurna hari bahagia kami.
+          </p>
+        </div>
+
+        <!-- Minimalist Countdown Module -->
+        <div class="w-full mt-8 text-center">
+          <div class="flex items-center justify-center space-x-3 mb-3">
+            <div class="h-[1px] w-12 bg-outline-variant/60"></div>
+            <span class="text-[10px] font-semibold text-secondary uppercase tracking-[0.2em]">Menuju Hari Bahagia</span>
+            <div class="h-[1px] w-12 bg-outline-variant/60"></div>
+          </div>
+
+          <!-- Timer Bento Grid -->
+          <div class="grid grid-cols-4 gap-2">
+            <div class="flex flex-col items-center justify-center p-3 rounded-lg bg-surface-container border border-outline-variant/50">
+              <span id="timer-days" class="font-headline-lg text-2xl text-primary font-medium">00</span>
+              <span class="text-[10px] font-semibold text-secondary uppercase mt-0.5">Hari</span>
+            </div>
+            <div class="flex flex-col items-center justify-center p-3 rounded-lg bg-surface-container border border-outline-variant/50">
+              <span id="timer-hours" class="font-headline-lg text-2xl text-primary font-medium">00</span>
+              <span class="text-[10px] font-semibold text-secondary uppercase mt-0.5">Jam</span>
+            </div>
+            <div class="flex flex-col items-center justify-center p-3 rounded-lg bg-surface-container border border-outline-variant/50">
+              <span id="timer-mins" class="font-headline-lg text-2xl text-primary font-medium">00</span>
+              <span class="text-[10px] font-semibold text-secondary uppercase mt-0.5">Menit</span>
+            </div>
+            <div class="flex flex-col items-center justify-center p-3 rounded-lg bg-surface-container border border-outline-variant/50">
+              <span id="timer-secs" class="font-headline-lg text-2xl text-secondary font-medium">00</span>
+              <span class="text-[10px] font-semibold text-secondary uppercase mt-0.5">Detik</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cultural Divider 1 -->
+      <div class="cultural-divider my-4">
+        <span class="cultural-divider-line"></span>
+        <span class="cultural-ornament-slot"></span>
+        <span class="cultural-divider-line"></span>
+      </div>
+
+      <!-- =====================================================================
+           SECTION 2: AYAT SUCI / SPIRITUAL QUOTE
+           ===================================================================== -->
+      <section class="w-full mt-2 mb-8 text-center">
+        <p id="quote-bismillah" class="text-[11px] font-semibold text-secondary uppercase tracking-[0.2em] mb-1">
+          Bismillahir Rahmanir Rahim
+        </p>
+        <h2 id="quote-title" class="font-headline-lg text-2xl text-on-surface italic font-normal mb-3">
+          The Two Souls
+        </h2>
+
+        <!-- Scripture Quote Card -->
+        <div class="relative py-6 px-5 rounded-xl bg-surface-container-low border border-outline-variant/40 paper-shadow">
+          <span class="material-symbols-outlined absolute top-3 left-3 text-outline-variant text-[16px]">format_quote</span>
+          <p id="quote-arabic" class="font-headline-lg text-base text-primary leading-loose mb-3 font-normal">
+            وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+          </p>
+          <p id="quote-translation" class="text-xs text-on-surface-variant leading-relaxed italic">
+            “Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.”
+          </p>
+          <div class="mt-3 flex items-center justify-center gap-1.5">
+            <span class="h-0.5 w-4 bg-tertiary/60"></span>
+            <span id="quote-source" class="text-[10px] font-semibold text-secondary uppercase tracking-widest">
+              QS. Ar-Rum: 21
+            </span>
+            <span class="h-0.5 w-4 bg-tertiary/60"></span>
+          </div>
+          <span class="material-symbols-outlined absolute bottom-3 right-3 text-outline-variant text-[16px] rotate-180">format_quote</span>
+        </div>
+      </section>
+
+      <!-- Cultural Divider 2 -->
+      <div class="cultural-divider my-4">
+        <span class="cultural-divider-line"></span>
+        <span class="cultural-ornament-slot"></span>
+        <span class="cultural-divider-line"></span>
+      </div>
+
+      <!-- =====================================================================
+           SECTION 3: THE COUPLE (GROOM & BRIDE)
+           ===================================================================== -->
+      <section id="couple" class="w-full mt-4 mb-10 scroll-mt-24">
+        <!-- Groom Card -->
+        <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 p-space-md paper-shadow mb-6">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-[10px] font-semibold text-secondary uppercase tracking-widest">The Groom</span>
+            <span class="material-symbols-outlined text-outline text-base">diamond</span>
+          </div>
+          <div class="relative w-full aspect-[4/5] overflow-hidden rounded-lg bg-surface-container mb-space-md border border-outline-variant/30">
+            <img id="groom-photo" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeFonswWNiV_t4y2hTcaSKTX-aD-D-TNjeNULV2HNa_oPIzI56YkOZCsSOgBlrXm6noZIvvntXYq_tMxnRqhxWRFxBqx-1p0RTALfxMJfpkq1_pXWHPX907-HNzhkUs3XoIRDMowcc8pyXNraJfvsPY6i58JbpEYdwX3ZQK7YR_dz6lsJYpdeyvYKlZrBIB_ZZk5La_ajiUoCKd7BOHibJyokW11RMht23HXXB04MMm0uPTif96Ys" alt="Groom Arya Danendra"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent pointer-events-none"></div>
+          </div>
+          <div class="text-center px-1">
+            <h3 id="groom-name" class="font-headline-lg text-xl text-on-surface font-medium tracking-tight mb-0.5">
+              Arya Danendra, S.Ds.
+            </h3>
+            <p id="groom-role" class="text-[11px] font-semibold text-secondary uppercase tracking-widest mb-3">
+              Creative Director &amp; Designer
+            </p>
+            <div class="h-px w-12 subtle-line mx-auto mb-3"></div>
+            <p id="groom-parents" class="text-xs text-on-surface-variant mb-4 leading-relaxed">
+              Putra pertama dari pasangan terkasih Bpk. Ir. Hendra &amp; Ibu Ratna
+            </p>
+            <a id="groom-ig-link" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-outline-variant text-on-surface text-xs hover:bg-secondary/10 active:scale-95 transition-all" href="https://instagram.com/aryadanendra" target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[15px] text-secondary">alternate_email</span>
+              <span id="groom-ig-handle" class="font-medium tracking-wider">aryadanendra</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Union Divider -->
+        <div class="flex flex-col items-center justify-center my-6 space-y-1">
+          <div class="flex items-center gap-3">
+            <span class="h-px w-14 bg-outline-variant/60"></span>
+            <span class="font-headline-lg text-2xl text-secondary italic font-normal">&amp;</span>
+            <span class="h-px w-14 bg-outline-variant/60"></span>
+          </div>
+          <span class="text-[10px] font-semibold text-outline uppercase tracking-[0.25em]">In Loving Union</span>
+        </div>
+
+        <!-- Bride Card -->
+        <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 p-space-md paper-shadow">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-[10px] font-semibold text-secondary uppercase tracking-widest">The Bride</span>
+            <span class="material-symbols-outlined text-outline text-base">favorite</span>
+          </div>
+          <div class="relative w-full aspect-[4/5] overflow-hidden rounded-lg bg-surface-container mb-space-md border border-outline-variant/30">
+            <img id="bride-photo" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJljqKsAUiRcWyRq5uhkPqUp5Gw2JW7IV0UP644-XFxD3q9tbRvGfqJnqV_7kpm0r7qW7BvLB53gS89CC5G1DUEtIzhP_TjrThEZExBRINitzJvpBy-M63Mpea82OiFN6f9D8CYTdIcVYdtRV-1wjN999X3UzitF9GexeYxp1atEtj5zrIChyH85muuFRzX8mslMin6GvRQNTcjnLUS3a_XrL-t_AXYu1lwWSQrFjGJeg4lBT1MvE" alt="Bride Maya Kirana"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent pointer-events-none"></div>
+          </div>
+          <div class="text-center px-1">
+            <h3 id="bride-name" class="font-headline-lg text-xl text-on-surface font-medium tracking-tight mb-0.5">
+              Maya Kirana, B.Arch.
+            </h3>
+            <p id="bride-role" class="text-[11px] font-semibold text-secondary uppercase tracking-widest mb-3">
+              Interior Architect
+            </p>
+            <div class="h-px w-12 subtle-line mx-auto mb-3"></div>
+            <p id="bride-parents" class="text-xs text-on-surface-variant mb-4 leading-relaxed">
+              Putri kedua dari pasangan terkasih Bpk. Bambang &amp; Ibu Sri Wahyuni
+            </p>
+            <a id="bride-ig-link" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-outline-variant text-on-surface text-xs hover:bg-secondary/10 active:scale-95 transition-all" href="https://instagram.com/mayakirana" target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[15px] text-secondary">alternate_email</span>
+              <span id="bride-ig-handle" class="font-medium tracking-wider">mayakirana</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cultural Divider 3 -->
+      <div class="cultural-divider my-4">
+        <span class="cultural-divider-line"></span>
+        <span class="cultural-ornament-slot"></span>
+        <span class="cultural-divider-line"></span>
+      </div>
+
+      <!-- =====================================================================
+           SECTION 4: OUR LOVE STORY TIMELINE
+           ===================================================================== -->
+      <section id="story" class="w-full mt-6 mb-10 scroll-mt-24">
+        <div class="text-center mb-6">
+          <p id="story-subtitle" class="text-[11px] font-semibold text-secondary uppercase tracking-[0.2em] mb-1">Chronicles</p>
+          <h3 id="story-title" class="font-headline-lg text-2xl text-on-surface font-normal">Our Love Story</h3>
+          <p id="story-desc" class="text-xs text-on-surface-variant mt-1">A serendipitous chapter across blueprints &amp; skylines</p>
+        </div>
+
+        <!-- Vertical Timeline Container -->
+        <div id="story-milestones-container" class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-px before:bg-outline-variant/60">
+          <!-- Dynamically populated by wedding-app.js -->
+        </div>
+      </section>
+
+      <!-- Cultural Divider 4 -->
+      <div class="cultural-divider my-4">
+        <span class="cultural-divider-line"></span>
+        <span class="cultural-ornament-slot"></span>
+        <span class="cultural-divider-line"></span>
+      </div>
+
+      <!-- =====================================================================
+           SECTION 5: MOMENTS OF GRACE (PHOTO GALLERY)
+           ===================================================================== -->
+      <section class="w-full mt-4 mb-10">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <span id="gallery-subtitle" class="text-[10px] font-semibold text-secondary uppercase tracking-widest">Visual Diary</span>
+            <h3 id="gallery-title" class="font-headline-lg text-xl text-on-surface">Moments of Grace</h3>
+          </div>
+          <span class="text-[10px] font-semibold text-outline uppercase tracking-wider">Memories</span>
+        </div>
+
+        <!-- Bento Photo Grid -->
+        <div id="gallery-grid-container" class="grid grid-cols-2 gap-3">
+          <!-- Dynamically populated by wedding-app.js -->
+        </div>
+      </section>
+
+      <!-- Cultural Divider 5 -->
+      <div class="cultural-divider my-4">
+        <span class="cultural-divider-line"></span>
+        <span class="cultural-ornament-slot"></span>
+        <span class="cultural-divider-line"></span>
+      </div>
+
+      <!-- =====================================================================
+           SECTION 6: EVENTS (AKAD & RESEPSI)
+           ===================================================================== -->
+      <section id="events" class="w-full mt-4 mb-10 scroll-mt-24">
+        <div class="text-center pt-4 pb-6">
+          <div class="inline-flex items-center justify-center w-12 h-12 rounded-full border border-outline-variant/40 bg-surface-container-low mb-3">
+            <span class="material-symbols-outlined text-secondary text-[22px]">spa</span>
+          </div>
+          <p class="text-[11px] font-semibold text-secondary uppercase tracking-[0.2em] mb-1">The Wedding Itinerary</p>
+          <h3 class="font-headline-lg text-2xl text-on-surface mb-2">Rangkaian Hari Bahagia</h3>
+          <p class="text-xs text-on-surface-variant max-w-xs mx-auto leading-relaxed">
+            Dengan penuh rasa syukur, kami mengundang Anda untuk merayakan momen sakral awal perjalanan kami di Uluwatu, Bali.
+          </p>
+        </div>
+
+        <!-- Event Cards Container -->
+        <div class="space-y-6">
+          <!-- Event 1: Akad Nikah -->
+          <article class="bg-surface-container-low border border-outline-variant/50 rounded-xl p-space-md paper-shadow relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1.5 h-full bg-tertiary"></div>
+            <div class="pl-2">
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <div>
+                  <span id="e1-tag" class="text-[10px] font-semibold text-secondary uppercase tracking-widest">Sesi Pagi</span>
+                  <h4 id="e1-title" class="font-headline-lg text-xl text-on-surface mt-0.5">Akad Nikah</h4>
+                  <p id="e1-subtitle" class="text-xs text-on-surface-variant italic">The Holy Matrimony</p>
+                </div>
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface rounded-full border border-outline-variant/60 shadow-xs">
+                  <span class="material-symbols-outlined text-[14px] text-secondary">schedule</span>
+                  <span id="e1-time" class="text-[11px] font-semibold text-on-surface">08:30 - 10:30 WITA</span>
+                </div>
+              </div>
+
+              <!-- Date & Venue -->
+              <div class="space-y-2 py-3 border-y border-outline-variant/30 text-on-surface">
+                <div class="flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-secondary text-[18px]">calendar_month</span>
+                  <span id="e1-date" class="text-xs sm:text-sm font-medium">Sabtu, 24 Oktober 2026</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">location_on</span>
+                  <div>
+                    <p id="e1-venue" class="text-xs sm:text-sm font-medium leading-snug">The Glass House, Tirtha Uluwatu</p>
+                    <p id="e1-address" class="text-[11px] text-on-surface-variant mt-0.5">Jl. Uluwatu Banjar Dinas Karang Boma, Pecatu, Bali</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dresscode -->
+              <div class="mt-3">
+                <div class="flex items-center gap-1.5 mb-1.5">
+                  <span class="material-symbols-outlined text-secondary text-[15px]">checkroom</span>
+                  <span class="text-[10px] font-semibold text-secondary uppercase tracking-wider">Tata Busana / Dresscode</span>
+                </div>
+                <div class="inline-block bg-surface px-3 py-1.5 rounded-lg border border-outline-variant/60">
+                  <span id="e1-dresscode" class="text-xs font-medium text-on-surface">Traditional White / Earthy Taupe</span>
+                </div>
+              </div>
+
+              <!-- CTAs -->
+              <div class="grid grid-cols-2 gap-2 mt-4">
+                <a id="e1-cal-btn" class="flex items-center justify-center gap-1.5 h-10 px-3 bg-primary text-on-primary rounded-lg text-center text-[11px] uppercase tracking-wider font-semibold active:scale-95 transition-all" href="https://calendar.google.com" target="_blank" rel="noopener noreferrer">
+                  <span class="material-symbols-outlined text-[15px]">event</span>
+                  <span>Google Calendar</span>
+                </a>
+                <a id="e1-map-btn" class="flex items-center justify-center gap-1.5 h-10 px-3 bg-transparent border border-outline text-on-surface rounded-lg text-center text-[11px] uppercase tracking-wider font-semibold hover:bg-secondary/5 active:scale-95 transition-all" href="#venue-map">
+                  <span class="material-symbols-outlined text-[15px] text-secondary">map</span>
+                  <span>Buka Peta</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Event 2: Resepsi Pernikahan -->
+          <article class="bg-surface-container-low border border-outline-variant/50 rounded-xl p-space-md paper-shadow relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-1.5 h-full bg-secondary"></div>
+            <div class="pl-2">
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <div>
+                  <span id="e2-tag" class="text-[10px] font-semibold text-secondary uppercase tracking-widest">Sesi Senja &amp; Malam</span>
+                  <h4 id="e2-title" class="font-headline-lg text-xl text-on-surface mt-0.5">Resepsi Pernikahan</h4>
+                  <p id="e2-subtitle" class="text-xs text-on-surface-variant italic">Evening Reception &amp; Sunset Soirée</p>
+                </div>
+                <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface rounded-full border border-outline-variant/60 shadow-xs">
+                  <span class="material-symbols-outlined text-[14px] text-secondary">redeem</span>
+                  <span id="e2-time" class="text-[11px] font-semibold text-on-surface">17:30 WITA - Selesai</span>
+                </div>
+              </div>
+
+              <!-- Cocktail timing note -->
+              <div class="mb-3 px-3 py-2 bg-surface/70 rounded-lg border border-outline-variant/40 flex items-center justify-between">
+                <span id="e2-cocktail" class="text-xs text-on-surface font-medium">Sunset Cocktails &amp; Canapés</span>
+                <span class="text-[10px] font-semibold text-secondary">17:30 - 19:00</span>
+              </div>
+
+              <!-- Date & Venue -->
+              <div class="space-y-2 py-3 border-y border-outline-variant/30 text-on-surface">
+                <div class="flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-secondary text-[18px]">calendar_month</span>
+                  <span id="e2-date" class="text-xs sm:text-sm font-medium">Sabtu, 24 Oktober 2026</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">stadium</span>
+                  <div>
+                    <p id="e2-venue" class="text-xs sm:text-sm font-medium leading-snug">Cliffside Amphitheater, Tirtha Uluwatu</p>
+                    <p id="e2-address" class="text-[11px] text-on-surface-variant mt-0.5">Overlooking the Indian Ocean cliff plateau</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dresscode -->
+              <div class="mt-3">
+                <div class="flex items-center justify-between mb-1.5">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-secondary text-[15px]">palette</span>
+                    <span class="text-[10px] font-semibold text-secondary uppercase tracking-wider">Dresscode</span>
+                  </div>
+                  <!-- Swatches -->
+                  <div class="flex items-center -space-x-1">
+                    <span class="w-3.5 h-3.5 rounded-full bg-[#E5D7B7] border border-white shadow-xs inline-block"></span>
+                    <span class="w-3.5 h-3.5 rounded-full bg-[#9EAA94] border border-white shadow-xs inline-block"></span>
+                    <span class="w-3.5 h-3.5 rounded-full bg-[#2C2C2A] border border-white shadow-xs inline-block"></span>
+                    <span class="w-3.5 h-3.5 rounded-full bg-[#D1B1A5] border border-white shadow-xs inline-block"></span>
+                  </div>
+                </div>
+                <div class="bg-surface px-3 py-1.5 rounded-lg border border-outline-variant/60">
+                  <span id="e2-dresscode" class="text-xs font-medium text-on-surface">Black Tie Optional / Formal Botanical Pastel</span>
+                </div>
+              </div>
+
+              <!-- Adults only note -->
+              <div class="mt-3 flex items-center gap-2 px-3 py-2 bg-secondary/10 rounded-lg border border-outline-variant/30">
+                <span class="material-symbols-outlined text-[16px] text-secondary">wine_bar</span>
+                <span class="text-[11px] text-on-surface-variant font-medium">Adults Only Reception (Untuk kenyamanan &amp; keselamatan tebing)</span>
+              </div>
+
+              <!-- CTAs -->
+              <div class="grid grid-cols-2 gap-2 mt-4">
+                <a id="e2-cal-btn" class="flex items-center justify-center gap-1.5 h-10 px-3 bg-primary text-on-primary rounded-lg text-center text-[11px] uppercase tracking-wider font-semibold active:scale-95 transition-all" href="https://calendar.google.com" target="_blank" rel="noopener noreferrer">
+                  <span class="material-symbols-outlined text-[15px]">notifications_active</span>
+                  <span>Ingatkan Saya</span>
+                </a>
+                <a id="e2-map-btn" class="flex items-center justify-center gap-1.5 h-10 px-3 bg-transparent border border-outline text-on-surface rounded-lg text-center text-[11px] uppercase tracking-wider font-semibold hover:bg-secondary/5 active:scale-95 transition-all" href="#venue-map">
+                  <span class="material-symbols-outlined text-[15px] text-secondary">navigation</span>
+                  <span>Petunjuk Lokasi</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SECTION 7: VENUE MAP & PROTOCOLS
+           ===================================================================== -->
+      <section id="venue-map" class="w-full mt-4 mb-10 scroll-mt-24">
+        <div class="flex items-center justify-between mb-3 px-1">
+          <div>
+            <span id="loc-section-label" class="text-[10px] font-semibold text-secondary uppercase tracking-widest">Lokasi Acara</span>
+            <h3 id="loc-title" class="font-headline-lg text-xl text-on-surface">Tirtha Uluwatu, Bali</h3>
+          </div>
+          <span class="material-symbols-outlined text-secondary text-[24px]">pin_drop</span>
+        </div>
+
+        <!-- Venue Preview Card -->
+        <div class="bg-surface-container-low border border-outline-variant/50 rounded-xl overflow-hidden paper-shadow">
+          <div class="relative w-full h-48 bg-surface-container overflow-hidden group">
+            <img id="loc-preview-img" alt="Venue Panoramic Map Preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Av_AdSTqOyDZiD0vGRNhWe_OLSv6Wjnt5W5A9xoKtAO1Po7i69zgSpcXMZNfD8fQgx7Ikcyp3IxcOTfbagJlBOUYd45d08oUBVXwrBrv2GkTFYZn-zMK9JEbko2va0FGcViVp8PltGL-X480M8Vj8qaoPJnf2IxNxr-zdWw1LqxSSIP9XI3Zcz7DW6wWU2GuGroL-ex1bJXaXyqWv11gjpGGfptPPfOaql0gqDrIV4hndJqWITY"/>
+            <div class="absolute inset-0 bg-black/20"></div>
+            <!-- Pin Badge -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+              <div class="bg-surface/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-outline-variant shadow-md flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+                <span class="text-[10px] font-semibold text-on-surface uppercase tracking-wider">Tirtha Uluwatu</span>
+              </div>
+            </div>
+            <!-- Coordinates Pill -->
+            <div id="loc-coordinates" class="absolute bottom-2.5 right-2.5 bg-surface/90 backdrop-blur-sm px-2 py-0.5 rounded text-[9px] font-medium text-on-surface tracking-wider border border-outline-variant/40">
+              8.8471° S, 115.1105° E
+            </div>
+          </div>
+
+          <div class="p-space-md">
+            <p id="loc-desc" class="text-xs text-on-surface leading-relaxed">
+              Kompleks Tirtha Uluwatu bertengger di atas tebing megah dengan pemandangan samudera 180 derajat. Akses melalui gerbang utama Banjar Karang Boma.
+            </p>
+
+            <!-- Shuttle Service Alert Pill -->
+            <div class="mt-4 p-3 rounded-lg bg-surface border border-outline-variant/50 flex items-start gap-3">
+              <div class="p-1.5 rounded bg-secondary/15 text-secondary mt-0.5">
+                <span class="material-symbols-outlined text-[18px]">airport_shuttle</span>
+              </div>
+              <div>
+                <p id="loc-shuttle-title" class="text-[11px] font-semibold text-on-surface uppercase tracking-wider">Layanan Shuttle &amp; Parkir Valet</p>
+                <p id="loc-shuttle-desc" class="text-xs text-on-surface-variant mt-0.5 leading-snug">
+                  Tersedia buggy shuttle dari area parkir utama menuju The Glass House dan Cliffside Amphitheater tanpa dipungut biaya.
+                </p>
+              </div>
+            </div>
+
+            <!-- Direction CTA -->
+            <a id="loc-maps-link" class="mt-4 flex items-center justify-center gap-2 w-full h-11 bg-primary text-on-primary rounded-lg text-center text-xs uppercase tracking-wider font-semibold active:scale-95 transition-all shadow-sm" href="https://maps.google.com" target="_blank" rel="noopener noreferrer">
+              <span class="material-symbols-outlined text-[18px]">directions</span>
+              <span>Petunjuk Arah (Google Maps)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Protocols & Etiquette Badges -->
+        <div class="mt-8">
+          <div class="text-center mb-4">
+            <span class="text-[10px] font-semibold text-secondary uppercase tracking-widest">Tata Tertib &amp; Kenyamanan</span>
+            <h4 class="font-headline-lg text-lg text-on-surface mt-0.5">Panduan Tamu Undangan</h4>
+          </div>
+          <div id="loc-etiquettes-container" class="grid grid-cols-2 gap-3">
+            <!-- Dynamically populated by wedding-app.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SECTION 8: RSVP (KONFIRMASI KEHADIRAN)
+           ===================================================================== -->
+      <section id="rsvp" class="w-full mt-4 mb-10 scroll-mt-24">
+        <div class="bg-surface-container-low border border-outline-variant/40 rounded-xl p-5 paper-shadow">
+          <div class="flex items-center gap-2 mb-1.5">
+            <span class="material-symbols-outlined text-secondary text-[20px]">mail</span>
+            <h3 class="font-headline-lg text-xl text-on-surface">Konfirmasi Kehadiran</h3>
+          </div>
+          <p class="text-xs text-on-surface-variant mb-6 leading-relaxed">
+            Mohon konfirmasi kesediaan hadir sebelum 24 September 2026 demi kelancaran reservasi jamuan makan &amp; tempat duduk.
+          </p>
+
+          <form id="rsvp-form" class="flex flex-col gap-4">
+            <!-- Name Input -->
+            <div class="flex flex-col gap-1.5">
+              <label class="text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold" for="rsvp-guest-name">
+                Nama Tamu Undangan
+              </label>
+              <div class="relative">
+                <input id="rsvp-guest-name" name="guest_name" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-3.5 py-2.5 text-xs text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Masukkan nama Anda" required type="text" value="Dimas &amp; Partner"/>
+                <span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant/50 text-[18px]">badge</span>
+              </div>
+            </div>
+
+            <!-- Attendance Radio -->
+            <div class="flex flex-col gap-2">
+              <label class="text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold">
+                Status Kehadiran
+              </label>
+              <div class="grid grid-cols-1 gap-2">
+                <label class="relative flex items-center p-3 rounded-lg border border-outline-variant bg-surface-container-lowest cursor-pointer hover:border-primary transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+                  <input name="attendance" type="radio" value="hadir" checked class="w-4 h-4 text-primary border-outline focus:ring-primary cursor-pointer"/>
+                  <div class="ml-3 flex flex-col">
+                    <span class="text-xs text-on-surface font-semibold">Hadir dengan Senang Hati</span>
+                    <span class="text-[11px] text-on-surface-variant">Kami akan hadir langsung di lokasi perayaan.</span>
+                  </div>
+                </label>
+                <label class="relative flex items-center p-3 rounded-lg border border-outline-variant bg-surface-container-lowest cursor-pointer hover:border-primary transition-all has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+                  <input name="attendance" type="radio" value="absen" class="w-4 h-4 text-primary border-outline focus:ring-primary cursor-pointer"/>
+                  <div class="ml-3 flex flex-col">
+                    <span class="text-xs text-on-surface font-semibold">Maaf, Belum Bisa Hadir</span>
+                    <span class="text-[11px] text-on-surface-variant">Mendoakan kebahagiaan kedua mempelai dari jauh.</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Number of Guests -->
+            <div class="flex flex-col gap-1.5">
+              <label class="text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold">
+                Jumlah Tamu (Reservasi Kursi)
+              </label>
+              <div class="grid grid-cols-2 gap-2.5">
+                <label class="flex items-center justify-center p-2.5 border border-outline-variant rounded-lg bg-surface-container-lowest cursor-pointer transition-all has-[:checked]:border-primary has-[:checked]:bg-primary has-[:checked]:text-on-primary">
+                  <input class="sr-only" name="guest_count" type="radio" value="1"/>
+                  <span class="text-xs font-medium">1 Orang</span>
+                </label>
+                <label class="flex items-center justify-center p-2.5 border border-outline-variant rounded-lg bg-surface-container-lowest cursor-pointer transition-all has-[:checked]:border-primary has-[:checked]:bg-primary has-[:checked]:text-on-primary">
+                  <input checked class="sr-only" name="guest_count" type="radio" value="2"/>
+                  <span class="text-xs font-medium">2 Orang</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Dietary Notes -->
+            <div class="flex flex-col gap-1.5">
+              <label class="text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold" for="dietary-notes">
+                Preferensi Diet / Catatan Khusus
+              </label>
+              <input id="dietary-notes" name="dietary_notes" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-3.5 py-2.5 text-xs text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-on-surface-variant/40" placeholder="Contoh: Vegetarian, Tanpa Udang, dll" type="text"/>
+            </div>
+
+            <!-- Submit Button -->
+            <button id="rsvp-submit-btn" type="submit" class="mt-2 w-full h-11 bg-primary text-on-primary text-xs uppercase tracking-wider font-semibold rounded-lg flex items-center justify-center gap-2 hover:bg-black transition-all active:scale-[0.98] shadow-sm">
+              <span class="material-symbols-outlined text-[18px]">send</span>
+              <span>Kirim Konfirmasi RSVP</span>
+            </button>
+            <p id="rsvp-status-msg" class="hidden text-center text-xs text-secondary font-medium mt-1">
+              Terima kasih atas konfirmasi Anda. Sampai jumpa di hari bahagia kami!
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SECTION 9: TANDA KASIH & AMPLOP DIGITAL
+           ===================================================================== -->
+      <section class="w-full mt-2 mb-10">
+        <div class="bg-surface-container-low border border-outline-variant/40 rounded-xl p-5 paper-shadow">
+          <div class="flex items-center gap-2 mb-1.5">
+            <span class="material-symbols-outlined text-secondary text-[20px]">redeem</span>
+            <h3 id="gifts-title" class="font-headline-lg text-xl text-on-surface">Tanda Kasih &amp; Amplop Digital</h3>
+          </div>
+          <p id="gifts-intro" class="text-xs text-on-surface-variant leading-relaxed mb-6">
+            Doa restu Anda merupakan karunia terindah bagi kami. Namun jika Anda bermaksud memberikan tanda kasih berupa bingkisan atau amplop digital untuk bekal awal mahligai baru kami, kami menyediakannya dengan penuh kerendahan hati:
+          </p>
+
+          <!-- Bank Cards List -->
+          <div id="gifts-bank-container" class="flex flex-col gap-3.5 mb-6">
+            <!-- Dynamically populated by wedding-app.js -->
+          </div>
+
+          <!-- Secondary Actions: QRIS & Physical Gift Drawer -->
+          <div class="grid grid-cols-1 gap-2.5">
+            <button type="button" onclick="toggleModal('qris-modal')" class="w-full py-2.5 px-4 border border-outline-variant bg-surface-container-lowest rounded-lg text-xs uppercase tracking-wider font-semibold text-on-surface flex items-center justify-center gap-2 hover:bg-surface-container transition-all active:scale-98">
+              <span class="material-symbols-outlined text-[18px]">qr_code_scanner</span>
+              <span>Buka QRIS Amplop Digital</span>
+            </button>
+            <button type="button" onclick="toggleAddressDrawer()" class="w-full py-2.5 px-4 border border-outline-variant bg-surface-container-lowest rounded-lg text-xs uppercase tracking-wider font-semibold text-on-surface flex items-center justify-center gap-2 hover:bg-surface-container transition-all active:scale-98">
+              <span class="material-symbols-outlined text-[18px]">inventory_2</span>
+              <span>Kirim Hadiah Fisik (Alamat)</span>
+            </button>
+          </div>
+
+          <!-- Collapsible Physical Gift Delivery Address -->
+          <div id="address-drawer" class="hidden mt-4 pt-4 border-t border-outline-variant/40 flex flex-col gap-2 bg-surface-container-lowest/80 p-4 rounded-lg">
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-secondary">Alamat Penerimaan Kado:</span>
+            <p id="gift-recipient" class="text-xs font-semibold text-on-surface">Arya Danendra &amp; Maya Kirana</p>
+            <p id="gift-address" class="text-xs text-on-surface-variant leading-relaxed">
+              Jl. Dharmawangsa Elok No. 18, Kebayoran Baru, Jakarta Selatan, DKI Jakarta 12160
+            </p>
+            <span id="gift-contact" class="text-[11px] text-on-surface-variant mt-1">
+              Kontak Penerima: 0812-8890-1200 (Bpk. Danendra)
+            </span>
+            <button id="copy-address-btn" type="button" class="mt-2 self-start px-3 py-1.5 border border-outline-variant rounded text-[11px] uppercase tracking-wider text-on-surface flex items-center gap-1.5 hover:bg-surface-container active:scale-95 transition-all">
+              <span class="material-symbols-outlined text-[14px]">content_copy</span>
+              <span>Salin Alamat Lengkap</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           SECTION 10: DOA & UCAPAN (LIVE GUESTBOOK FEED)
+           ===================================================================== -->
+      <section class="w-full mt-2 mb-10">
+        <div class="bg-surface-container-low border border-outline-variant/40 rounded-xl p-5 paper-shadow">
+          <div class="flex items-center justify-between mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]">chat</span>
+              <h3 class="font-headline-lg text-xl text-on-surface">Doa &amp; Ucapan</h3>
+            </div>
+            <span id="wishes-count-badge" class="text-[10px] font-semibold bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">
+              38 Ucapan
+            </span>
+          </div>
+          <p class="text-xs text-on-surface-variant mb-5 leading-relaxed">
+            Tinggalkan untaian doa dan pesan manis untuk mengiringi langkah pertama kami.
+          </p>
+
+          <!-- Wishes Input Form -->
+          <form id="wishes-form" class="flex flex-col gap-2.5 mb-6">
+            <div class="flex flex-col gap-1">
+              <input id="wish-sender" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-3.5 py-2.5 text-xs text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Nama Anda" required type="text" value="Dimas Wicaksono"/>
+            </div>
+            <div class="flex flex-col gap-1">
+              <textarea id="wish-text" class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-xs text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary resize-none" placeholder="Tuliskan ucapan selamat dan doa tulus Anda..." required rows="3"></textarea>
+            </div>
+            <button type="submit" class="h-10 bg-primary text-on-primary text-xs uppercase tracking-wider font-semibold rounded-lg flex items-center justify-center gap-2 hover:bg-black transition-all active:scale-[0.98]">
+              <span class="material-symbols-outlined text-[16px]">send</span>
+              <span>Kirim Doa Restu</span>
+            </button>
+          </form>
+
+          <!-- Recent Wishes Feed -->
+          <div id="wishes-feed" class="flex flex-col gap-3.5 divide-y divide-outline-variant/30">
+            <!-- Dynamically populated by wedding-app.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           FOOTER & CLOSING MONOGRAM
+           ===================================================================== -->
+      <footer class="w-full text-center py-8 mb-6 border-t border-outline-variant/30">
+        <span class="material-symbols-outlined text-outline text-[24px]">spa</span>
+        <span id="footer-quote" class="block font-headline-lg text-lg italic text-secondary mt-2">With endless love,</span>
+        <p id="footer-names" class="font-headline-lg text-xl text-on-surface font-semibold mt-1">Arya &amp; Maya</p>
+        <p id="footer-date" class="text-[10px] font-semibold uppercase tracking-[0.25em] text-outline mt-2">24 • 10 • 2026</p>
+      </footer>
+
+    </main>
+
+    <!-- =========================================================================
+         BOTTOM FLOATING NAVIGATION BAR
+         ========================================================================= -->
+    <nav class="fixed bottom-0 left-0 w-full z-40 flex justify-around items-center px-space-xs py-space-xs max-w-lg mx-auto bg-surface/90 backdrop-blur-lg shadow-md border-t border-outline-variant/30">
+      <!-- Destination 1: Cover -->
+      <a href="#cover" class="bottom-nav-link flex flex-col items-center justify-center text-primary font-semibold py-1 transition-transform active:scale-95">
+        <span class="material-symbols-outlined text-[20px]">favorite</span>
+        <span class="text-[10px] uppercase tracking-wider mt-0.5">Cover</span>
+      </a>
+      <!-- Destination 2: Couple -->
+      <a href="#couple" class="bottom-nav-link flex flex-col items-center justify-center text-on-surface-variant/70 py-1 hover:text-primary transition-colors active:scale-95">
+        <span class="material-symbols-outlined text-[20px]">diamond</span>
+        <span class="text-[10px] uppercase tracking-wider mt-0.5">Couple</span>
+      </a>
+      <!-- Destination 3: Story -->
+      <a href="#story" class="bottom-nav-link flex flex-col items-center justify-center text-on-surface-variant/70 py-1 hover:text-primary transition-colors active:scale-95">
+        <span class="material-symbols-outlined text-[20px]">photo_library</span>
+        <span class="text-[10px] uppercase tracking-wider mt-0.5">Story</span>
+      </a>
+      <!-- Destination 4: Events -->
+      <a href="#events" class="bottom-nav-link flex flex-col items-center justify-center text-on-surface-variant/70 py-1 hover:text-primary transition-colors active:scale-95">
+        <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+        <span class="text-[10px] uppercase tracking-wider mt-0.5">Events</span>
+      </a>
+      <!-- Destination 5: RSVP -->
+      <a href="#rsvp" class="bottom-nav-link flex flex-col items-center justify-center text-on-surface-variant/70 py-1 hover:text-primary transition-colors active:scale-95">
+        <span class="material-symbols-outlined text-[20px]">mail</span>
+        <span class="text-[10px] uppercase tracking-wider mt-0.5">RSVP</span>
+      </a>
+    </nav>
+
+  </div>
+
+  <!-- =========================================================================
+       MODALS & NOTIFICATIONS
+       ========================================================================= -->
+
+  <!-- QRIS Modal -->
+  <div id="qris-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-surface rounded-xl max-w-sm w-full p-6 flex flex-col items-center text-center shadow-xl border border-outline-variant/40">
+      <div class="flex items-center justify-between w-full mb-3">
+        <h4 class="font-headline-lg text-lg text-on-surface">QRIS Amplop Digital</h4>
+        <button type="button" onclick="toggleModal('qris-modal')" class="text-on-surface-variant hover:text-primary p-1">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+      <div class="p-3 bg-white rounded-lg border border-outline-variant/60 shadow-xs mb-3">
+        <img id="qris-modal-image" class="w-52 h-52 object-contain" src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=WEDDING-ARYA-MAYA-AMPLOP-DIGITAL" alt="QRIS Code"/>
+      </div>
+      <p class="text-xs text-on-surface-variant leading-relaxed">
+        Pindai QRIS ini melalui aplikasi GoPay, OVO, Dana, BCA Mobile, atau mobile banking lainnya.
+      </p>
+      <button type="button" onclick="toggleModal('qris-modal')" class="mt-4 w-full py-2 bg-primary text-on-primary rounded-lg text-xs uppercase tracking-wider font-semibold">
+        Tutup
+      </button>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="max-w-lg w-full flex flex-col items-center" onclick="event.stopPropagation()">
+      <div class="relative w-full rounded-xl overflow-hidden shadow-2xl">
+        <img id="lightbox-img" class="w-full max-h-[80vh] object-contain mx-auto" src="" alt="Gallery Preview"/>
+        <button type="button" onclick="closeLightbox()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-black/90">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+      <p id="lightbox-caption" class="text-white text-xs mt-3 tracking-wide text-center"></p>
+    </div>
+  </div>
+
+  <!-- Floating Toast Notification -->
+  <div id="toast-notification" class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 bg-primary text-on-primary px-4 py-2.5 rounded-full text-xs font-medium shadow-lg border border-outline-variant/40 flex items-center gap-2 pointer-events-none">
+    Berhasil disalin!
+  </div>
+
+  <!-- Floating Theme Selector Launcher Button -->
+  <button id="floating-theme-btn" onclick="toggleThemeSelectorModal(true)" aria-label="Pilih Tema" class="fixed bottom-16 sm:bottom-20 left-4 z-40 bg-surface/90 hover:bg-surface text-primary border border-outline-variant/80 px-3.5 py-2 rounded-full shadow-xl backdrop-blur-md flex items-center gap-2 text-xs font-semibold active:scale-95 transition-all group">
+    <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+    <span class="material-symbols-outlined text-[18px] text-amber-500 group-hover:rotate-45 transition-transform">palette</span>
+    <span>Pilih Tema</span>
+    <span class="bg-amber-500/20 text-amber-600 px-1.5 py-0.5 rounded text-[10px] font-bold">19</span>
+  </button>
+
+  <!-- Modal / Drawer Pemilih 19 Tema Pernikahan -->
+  <div id="theme-selector-modal" class="fixed inset-0 z-[120] bg-black/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-in fade-in duration-200">
+    <div class="bg-surface rounded-t-2xl sm:rounded-2xl max-w-lg w-full max-h-[85vh] flex flex-col shadow-2xl border border-outline-variant/60 overflow-hidden" onclick="event.stopPropagation()">
+      <!-- Modal Header -->
+      <div class="px-5 py-3.5 border-b border-outline-variant/40 flex items-center justify-between shrink-0 bg-surface-container-low">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-600 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[20px]">palette</span>
+          </div>
+          <div>
+            <h3 class="font-headline-lg text-base font-bold text-primary">Pilih Tema Undangan</h3>
+            <p class="text-[11px] text-on-surface-variant">Tersedia 19 tema adat nusantara &amp; modern</p>
+          </div>
+        </div>
+        <button type="button" onclick="toggleThemeSelectorModal(false)" class="text-on-surface-variant hover:text-primary p-1.5 rounded-full hover:bg-surface-container">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Filter Tabs & Search -->
+      <div class="p-3 bg-surface-container-lowest border-b border-outline-variant/30 space-y-2 shrink-0">
+        <!-- Search bar -->
+        <div class="relative">
+          <input type="text" id="modal-theme-search" oninput="searchModalThemes(this.value)" placeholder="Cari tema (jawa, sunda, minang, pantai, dll)..." class="w-full bg-surface-container border border-outline-variant rounded-lg pl-8 pr-3 py-1.5 text-xs text-on-surface focus:outline-none focus:border-primary"/>
+          <span class="material-symbols-outlined absolute left-2.5 top-2 text-secondary text-[16px]">search</span>
+        </div>
+        <!-- Category Buttons -->
+        <div class="flex items-center gap-1 overflow-x-auto no-scrollbar py-0.5 text-[11px]">
+          <button type="button" onclick="filterModalThemes('all')" id="modal-filter-all" class="modal-theme-filter-btn px-2.5 py-1 rounded-md font-semibold whitespace-nowrap bg-primary text-on-primary">Semua (19)</button>
+          <button type="button" onclick="filterModalThemes('nusantara')" id="modal-filter-nusantara" class="modal-theme-filter-btn px-2.5 py-1 rounded-md font-medium whitespace-nowrap text-on-surface-variant hover:text-primary">🇮🇩 Nusantara (9)</button>
+          <button type="button" onclick="filterModalThemes('modern')" id="modal-filter-modern" class="modal-theme-filter-btn px-2.5 py-1 rounded-md font-medium whitespace-nowrap text-on-surface-variant hover:text-primary">✨ Modern (6)</button>
+          <button type="button" onclick="filterModalThemes('destination')" id="modal-filter-destination" class="modal-theme-filter-btn px-2.5 py-1 rounded-md font-medium whitespace-nowrap text-on-surface-variant hover:text-primary">🏝️ Pantai/Alam (2)</button>
+          <button type="button" onclick="filterModalThemes('religi')" id="modal-filter-religi" class="modal-theme-filter-btn px-2.5 py-1 rounded-md font-medium whitespace-nowrap text-on-surface-variant hover:text-primary">🕌 Religi (2)</button>
+        </div>
+      </div>
+
+      <!-- Presets List (Scrollable) -->
+      <div id="modal-themes-container" class="p-4 overflow-y-auto max-h-[55vh] grid grid-cols-1 sm:grid-cols-2 gap-2.5 bg-surface">
+        <!-- Dynamically rendered by wedding-app.js -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-3 bg-surface-container-low border-t border-outline-variant/40 flex items-center justify-between text-xs shrink-0">
+        <span class="text-on-surface-variant text-[11px]">Ingin kustomisasi warna manual?</span>
+        <a href="admin.html" target="_blank" class="px-3 py-1 bg-primary text-on-primary rounded font-semibold text-[11px] flex items-center gap-1">
+          <span class="material-symbols-outlined text-[14px]">tune</span>
+          <span>Buka CMS</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/wedding-data.js"></script>
+  <script src="js/wedding-app.js"></script>
+</body>
+</html>

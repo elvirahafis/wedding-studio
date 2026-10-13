@@ -1,0 +1,250 @@
+/* ==========================================================================
+   Wedding Invitation - Luxury Editorial Styling System
+   Dynamic CSS Variables bound to CMS
+   ========================================================================== */
+
+:root {
+  --color-primary: #1C1A17;
+  --color-on-primary: #FFFFFF;
+  --color-secondary: #8C7A6B;
+  --color-tertiary: #CCA730;
+  --color-background: #FAF8F5;
+  --color-surface: #FBF9F6;
+  --color-surface-container: #F5F2EB;
+  --color-surface-container-low: #FAF8F5;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-outline: #CDC5BC;
+  --color-outline-variant: #E8E2D8;
+  --color-on-surface: #1B1C1A;
+  --color-on-surface-variant: #4B463F;
+
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --border-radius: 0.5rem;
+}
+
+/* Material Symbols Styling */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.material-symbols-outlined.fill-1 {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Base resets & typography */
+body {
+  background-color: var(--color-background);
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.75) 0%, transparent 45%),
+    radial-gradient(circle at 90% 90%, var(--color-surface-container) 0%, transparent 55%),
+    radial-gradient(circle at 50% 50%, var(--color-background) 0%, transparent 100%);
+  background-attachment: fixed;
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Paper Texture & Tactile Shadows */
+.paper-shadow {
+  box-shadow: 0 12px 36px -4px rgba(28, 26, 23, 0.05), 0 4px 12px -2px rgba(140, 122, 107, 0.03);
+}
+
+.subtle-line {
+  background: linear-gradient(90deg, transparent, var(--color-outline), transparent);
+}
+
+/* Spinning Vinyl Animation */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.music-spin {
+  animation: spin-slow 8s linear infinite;
+}
+
+.music-paused {
+  animation-play-state: paused !important;
+}
+
+/* Luxury Curtain / Opening Screen with Luminous Theme Atmosphere */
+#envelope-curtain {
+  background-color: var(--color-surface);
+  background-image: 
+    radial-gradient(circle at 50% 8%, rgba(255, 255, 255, 0.85) 0%, transparent 50%),
+    radial-gradient(circle at 15% 85%, var(--color-background) 0%, transparent 55%),
+    radial-gradient(circle at 85% 80%, var(--color-surface-container) 0%, transparent 50%);
+  transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.8s ease-in-out;
+}
+
+#envelope-curtain.opened {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Main Invitation Mobile Shell Radiant Background */
+.main-invitation-shell {
+  background-color: var(--color-surface);
+  background-image: 
+    radial-gradient(circle at 90% 5%, var(--color-background) 0%, transparent 40%),
+    radial-gradient(circle at 10% 25%, rgba(255, 255, 255, 0.7) 0%, transparent 45%),
+    radial-gradient(circle at 85% 65%, var(--color-surface-container) 0%, transparent 45%),
+    radial-gradient(circle at 15% 90%, var(--color-background) 0%, transparent 45%);
+}
+
+/* Floating Music Widget */
+.floating-music-pill {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Toast Notification */
+#toast-notification {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+#toast-notification.show {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal Transitions */
+.modal-overlay {
+  transition: opacity 0.25s ease;
+}
+
+.modal-content {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for clean editorial look */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Wax Seal Button Pulse */
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.wax-seal-pulse {
+  animation: pulse-subtle 2.5s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   CULTURAL ORNAMENT SYSTEM (ADAT NUSANTARA & MODERN MOTIFS)
+   ========================================================================== */
+
+/* Cultural Section Dividers */
+.cultural-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.875rem;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.cultural-divider-line {
+  height: 1px;
+  flex: 1;
+  max-width: 72px;
+  background: linear-gradient(90deg, transparent, var(--color-outline), transparent);
+}
+
+.cultural-ornament-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--color-tertiary);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.05));
+  transition: transform 0.3s ease;
+}
+
+.cultural-ornament-slot:hover {
+  transform: scale(1.12);
+}
+
+.cultural-ornament-slot svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Curtain Seal Badge */
+.curtain-cultural-seal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Cultural Theme Watermarks & Textures on Cards */
+body[data-ornament="jawa"] .paper-shadow {
+  background-image: radial-gradient(var(--color-outline-variant) 0.8px, transparent 0.8px);
+  background-size: 16px 16px;
+}
+
+body[data-ornament="sunda"] .paper-shadow {
+  background-image: radial-gradient(var(--color-outline-variant) 0.75px, transparent 0.75px);
+  background-size: 20px 20px;
+}
+
+body[data-ornament="minang"] .paper-shadow {
+  background-image: linear-gradient(45deg, var(--color-outline-variant) 1px, transparent 1px),
+                    linear-gradient(-45deg, var(--color-outline-variant) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+body[data-ornament="batak"] .paper-shadow {
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 12px, var(--color-outline-variant) 12px, var(--color-outline-variant) 13px);
+}
+
+body[data-ornament="bali"] .paper-shadow {
+  background-image: radial-gradient(var(--color-outline-variant) 0.9px, transparent 0.9px);
+  background-size: 18px 18px;
+}
+
+body[data-ornament="bugis"] .paper-shadow {
+  background-image: radial-gradient(var(--color-outline-variant) 0.75px, transparent 0.75px);
+  background-size: 22px 22px;
+}
+
+body[data-ornament="melayu"] .paper-shadow {
+  background-image: radial-gradient(var(--color-outline-variant) 0.75px, transparent 0.75px);
+  background-size: 20px 20px;
+}

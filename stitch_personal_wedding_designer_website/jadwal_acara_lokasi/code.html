@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>A &amp; M — Rangkaian Hari Bahagia</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#fbf9f6",
+            "surface-dim": "#dbdad7",
+            "inverse-primary": "#cbc5c0",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#87837f",
+            "on-surface-variant": "#4b463f",
+            "secondary": "#6c5b4d",
+            "on-secondary": "#ffffff",
+            "outline": "#7c766e",
+            "primary": "#000000",
+            "on-tertiary-fixed": "#241a00",
+            "surface-variant": "#e4e2df",
+            "surface-container-low": "#f5f3f0",
+            "surface-container": "#efeeeb",
+            "error": "#ba1a1a",
+            "on-surface": "#1b1c1a",
+            "on-secondary-fixed-variant": "#534437",
+            "tertiary-container": "#cca730",
+            "primary-fixed": "#e7e1dc",
+            "surface-container-high": "#eae8e5",
+            "on-primary-fixed-variant": "#494643",
+            "on-tertiary-fixed-variant": "#574500",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#1d1b18",
+            "secondary-container": "#f2dcca",
+            "secondary-fixed-dim": "#d8c3b2",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#ffe088",
+            "on-secondary-fixed": "#25190f",
+            "outline-variant": "#cdc5bc",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#f5decd",
+            "background": "#fbf9f6",
+            "inverse-surface": "#30312f",
+            "surface-tint": "#615e5a",
+            "on-secondary-container": "#706051",
+            "tertiary-fixed-dim": "#e9c349",
+            "surface-container-highest": "#e4e2df",
+            "on-background": "#1b1c1a",
+            "primary-fixed-dim": "#cbc5c0",
+            "surface-bright": "#fbf9f6",
+            "on-tertiary": "#ffffff",
+            "tertiary": "#735c00",
+            "on-tertiary-container": "#4f3e00",
+            "primary-container": "#1d1b18",
+            "inverse-on-surface": "#f2f0ed"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin": "1.25rem",
+            "space-xs": "0.375rem",
+            "margin-desktop": "4rem",
+            "space-xl": "3.5rem",
+            "space-lg": "2rem",
+            "gutter-desktop": "2rem",
+            "gutter": "1rem",
+            "space-sm": "0.75rem",
+            "space-md": "1.25rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "headline-sm": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "display-lg-mobile": ["Playfair Display"]
+          },
+          "fontSize": {
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.16em", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "54px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.12em", "fontWeight": "600" }],
+            "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top App Bar (Shared Component Anchored) -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin py-space-xs max-w-lg mx-auto bg-surface/85 backdrop-blur-md shadow-sm">
+<!-- Leading Music Audio Player Toggle -->
+<button aria-label="Toggle background music" class="flex items-center justify-center w-9 h-9 rounded-full text-primary hover:text-primary transition-colors duration-200 active:scale-95" id="audio-toggle">
+<span class="material-symbols-outlined text-[20px]" data-icon="music_note">music_note</span>
+</button>
+<!-- Headline / Monogram Anchor -->
+<div class="flex items-center space-x-2">
+<span class="font-headline-md text-headline-md tracking-wider text-on-surface uppercase font-bold">A &amp; M</span>
+</div>
+<!-- Trailing Wedding Book / Menu Icon -->
+<button aria-label="Open wedding guidebook" class="flex items-center justify-center w-9 h-9 rounded-full text-on-surface-variant hover:text-primary transition-colors duration-200 active:scale-95">
+<span class="material-symbols-outlined text-[20px]" data-icon="menu_book">menu_book</span>
+</button>
+</header>
+<!-- Main Viewport Canvas (Mobile Form Factor Centered) -->
+<main class="max-w-lg mx-auto pt-16 pb-28 px-margin">
+<!-- Hero Editorial Chapter Intro -->
+<section class="text-center pt-8 pb-6">
+<!-- Botanical Monogram Seal -->
+<div class="inline-flex items-center justify-center w-12 h-12 rounded-full border border-outline-variant/40 bg-surface-container-low mb-4">
+<span class="material-symbols-outlined text-secondary text-[22px]" data-icon="spa">spa</span>
+</div>
+<p class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em] mb-2">The Wedding Itinerary</p>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-3">Rangkaian Hari Bahagia</h1>
+<!-- Hairline Ornament -->
+<div class="flex items-center justify-center gap-3 max-w-[140px] mx-auto opacity-70">
+<div class="h-[1px] flex-1 bg-outline-variant"></div>
+<span class="text-[9px] text-secondary tracking-widest">✦</span>
+<div class="h-[1px] flex-1 bg-outline-variant"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-3 max-w-xs mx-auto leading-relaxed">
+        Dengan penuh rasa syukur, kami mengundang Anda untuk merayakan momen sakral awal perjalanan kami di Uluwatu, Bali.
+      </p>
+</section>
+<!-- Itinerary Timeline Section -->
+<section class="space-y-6">
+<!-- Event Card 1: Akad Nikah (Holy Matrimony) -->
+<article class="bg-surface-container-low border border-outline-variant/50 rounded-lg p-space-md shadow-[0_12px_36px_-4px_rgba(28,26,23,0.04)] relative overflow-hidden transition-all duration-300">
+<!-- Accent Gold Line Indicator -->
+<div class="absolute top-0 left-0 w-1 h-full bg-[#C5A880]"></div>
+<div class="pl-2">
+<!-- Session Header & Timeline Tag -->
+<div class="flex items-start justify-between gap-2 mb-3">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Sesi Pagi</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">Akad Nikah</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">The Holy Matrimony</p>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface rounded-full border border-outline-variant/60 shadow-xs">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="schedule">schedule</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">08:30 - 10:30 WITA</span>
+</div>
+</div>
+<!-- Date & Location Spec -->
+<div class="space-y-2 py-3 border-y border-outline-variant/30 text-on-surface">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="calendar_month">calendar_month</span>
+<span class="font-body-md text-body-md font-medium">Sabtu, 24 Oktober 2026</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5" data-icon="location_on">location_on</span>
+<div>
+<p class="font-body-md text-body-md font-medium leading-snug">The Glass House, Tirtha Uluwatu</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Jl. Uluwatu Banjar Dinas Karang Boma, Pecatu, Bali</p>
+</div>
+</div>
+</div>
+<!-- Dresscode Badge Module -->
+<div class="mt-4 pt-1">
+<div class="flex items-center gap-1.5 mb-2">
+<span class="material-symbols-outlined text-secondary text-[16px]" data-icon="checkroom">checkroom</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Tata Busana / Dresscode</span>
+</div>
+<div class="inline-block bg-surface px-3 py-1.5 rounded-lg border border-outline-variant/60">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Traditional White / Earthy Taupe</span>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="grid grid-cols-2 gap-2 mt-5">
+<a class="flex items-center justify-center gap-1.5 h-10 px-3 bg-primary text-on-primary rounded text-center transition-colors active:bg-[#36322C]" href="https://calendar.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]" data-icon="event">event</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Google Calendar</span>
+</a>
+<a class="flex items-center justify-center gap-1.5 h-10 px-3 bg-transparent border border-outline text-on-surface rounded text-center hover:bg-black/5 active:scale-95 transition-all" href="#venue-map">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="map">map</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Buka Peta</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Event Card 2: Resepsi Pernikahan (Evening Reception) -->
+<article class="bg-surface-container-low border border-outline-variant/50 rounded-lg p-space-md shadow-[0_12px_36px_-4px_rgba(28,26,23,0.04)] relative overflow-hidden transition-all duration-300">
+<!-- Accent Gold Line Indicator -->
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary"></div>
+<div class="pl-2">
+<!-- Session Header & Timeline Tag -->
+<div class="flex items-start justify-between gap-2 mb-3">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Sesi Senja &amp; Malam</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">Resepsi Pernikahan</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">Evening Reception &amp; Sunset Soirée</p>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface rounded-full border border-outline-variant/60 shadow-xs">
+<span class="material-symbols-outlined text-[14px] text-secondary" data-icon="sunset">redeem</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">17:30 WITA - Selesai</span>
+</div>
+</div>
+<!-- Schedule breakdown note -->
+<div class="mb-3 px-3 py-2 bg-surface/70 rounded border border-outline-variant/40 flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface">Sunset Cocktails &amp; Canapés</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">17:30 - 19:00</span>
+</div>
+<!-- Venue Spec -->
+<div class="space-y-2 py-3 border-y border-outline-variant/30 text-on-surface">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5" data-icon="stadium">stadium</span>
+<div>
+<p class="font-body-md text-body-md font-medium leading-snug">Cliffside Amphitheater, Tirtha Uluwatu</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Overlooking the Indian Ocean cliff plateau</p>
+</div>
+</div>
+</div>
+<!-- Dresscode & Palette Preview -->
+<div class="mt-4 pt-1">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]" data-icon="palette">palette</span>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-wider">Dresscode &amp; Palette</span>
+</div>
+<!-- Swatches preview dots -->
+<div class="flex items-center -space-x-1" title="Champagne, Sage, Charcoal, Rose Sand">
+<span class="w-4 h-4 rounded-full bg-[#E5D7B7] border border-white shadow-xs inline-block"></span>
+<span class="w-4 h-4 rounded-full bg-[#9EAA94] border border-white shadow-xs inline-block"></span>
+<span class="w-4 h-4 rounded-full bg-[#2C2C2A] border border-white shadow-xs inline-block"></span>
+<span class="w-4 h-4 rounded-full bg-[#D1B1A5] border border-white shadow-xs inline-block"></span>
+</div>
+</div>
+<div class="bg-surface px-3 py-2 rounded-lg border border-outline-variant/60 flex items-center justify-between">
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Black Tie Optional / Formal Botanical Pastel</span>
+</div>
+<!-- Adult Only Reception Badge / Note -->
+<div class="mt-3 flex items-center gap-2 px-3 py-2 bg-secondary-container/40 rounded border border-outline-variant/30">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="wine_bar">wine_bar</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Adults Only Reception (Untuk kenyamanan &amp; keselamatan tebing)</span>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="grid grid-cols-2 gap-2 mt-5">
+<a class="flex items-center justify-center gap-1.5 h-10 px-3 bg-primary text-on-primary rounded text-center transition-colors active:bg-[#36322C]" href="https://calendar.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]" data-icon="notifications_active">notifications_active</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Ingatkan Saya</span>
+</a>
+<a class="flex items-center justify-center gap-1.5 h-10 px-3 bg-transparent border border-outline text-on-surface rounded text-center hover:bg-black/5 active:scale-95 transition-all" href="#venue-map">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="navigation">navigation</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Petunjuk Lokasi</span>
+</a>
+</div>
+</div>
+</article>
+</section>
+<!-- Interactive Venue & Map Card -->
+<section class="mt-10" id="venue-map">
+<div class="flex items-center justify-between mb-3 px-1">
+<div>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Lokasi Acara</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tirtha Uluwatu, Bali</h3>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]" data-icon="pin_drop">pin_drop</span>
+</div>
+<div class="bg-surface-container-low border border-outline-variant/50 rounded-lg overflow-hidden shadow-[0_12px_36px_-4px_rgba(28,26,23,0.04)]">
+<!-- Visual Map Preview Anchor with Editorial Styling -->
+<div class="relative w-full h-48 bg-surface-container-high overflow-hidden group">
+<img alt="Venue Panoramic Map Preview" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An elegant high-fashion aerial architectural view of a minimalist cliffside ocean chapel in Uluwatu Bali with turquoise coastal waters, warm ivory stonework, and subtle botanical landscaping under golden afternoon sun." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6Av_AdSTqOyDZiD0vGRNhWe_OLSv6Wjnt5W5A9xoKtAO1Po7i69zgSpcXMZNfD8fQgx7Ikcyp3IxcOTfbagJlBOUYd45d08oUBVXwrBrv2GkTFYZn-zMK9JEbko2va0FGcViVp8PltGL-X480M8Vj8qaoPJnf2IxNxr-zdWw1LqxSSIP9XI3Zcz7DW6wWU2GuGroL-ex1bJXaXyqWv11gjpGGfptPPfOaql0gqDrIV4hndJqWITY"/>
+<div class="absolute inset-0 bg-black/15"></div>
+<!-- Realistic Map Pin Glass Badge Floating Center -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="bg-surface/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-outline-variant shadow-md flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">Tirtha Uluwatu</span>
+</div>
+<div class="w-0.5 h-4 bg-primary shadow"></div>
+</div>
+<!-- Coordinate Tag Pill -->
+<div class="absolute bottom-2.5 right-2.5 bg-surface/90 backdrop-blur-sm px-2.5 py-1 rounded text-[10px] font-label-sm text-on-surface tracking-wider border border-outline-variant/40">
+            8.8471° S, 115.1105° E
+          </div>
+</div>
+<!-- Venue Details Body -->
+<div class="p-space-md">
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+            Kompleks Tirtha Uluwatu bertengger di atas tebing megah dengan pemandangan samudera 180 derajat. Akses melalui gerbang utama Banjar Karang Boma.
+          </p>
+<!-- Shuttle Service Alert Pill -->
+<div class="mt-4 p-3 rounded-lg bg-surface border border-outline-variant/50 flex items-start gap-3">
+<div class="p-1.5 rounded bg-secondary-container/60 text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[18px]" data-icon="airport_shuttle">airport_shuttle</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider">Layanan Shuttle &amp; Parkir Valet</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+                Tersedia buggy shuttle dari area parkir utama menuju The Glass House dan Cliffside Amphitheater tanpa dipungut biaya.
+              </p>
+</div>
+</div>
+<!-- Map CTA Button -->
+<a class="mt-4 flex items-center justify-center gap-2 w-full h-11 bg-primary text-on-primary rounded text-center transition-all active:scale-[0.98]" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]" data-icon="directions">directions</span>
+<span class="font-label-lg text-label-lg uppercase tracking-wider font-semibold">Petunjuk Arah (Google Maps)</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Protocols & Etiquette Badges -->
+<section class="mt-10 mb-6">
+<div class="text-center mb-4">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Tata Tertib &amp; Kenyamanan</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Panduan Tamu Undangan</h3>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Badge 1: Punctuality -->
+<div class="p-3.5 bg-surface-container-low border border-outline-variant/40 rounded-lg text-center flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center mb-2 text-secondary border border-outline-variant/40">
+<span class="material-symbols-outlined text-[20px]" data-icon="alarm_on">alarm_on</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider">Hadir Tepat Waktu</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug text-[11px]">
+            Tamu diharapkan hadir 30 menit sebelum prosesi dimulai.
+          </p>
+</div>
+<!-- Badge 2: Unplugged Ceremony -->
+<div class="p-3.5 bg-surface-container-low border border-outline-variant/40 rounded-lg text-center flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center mb-2 text-secondary border border-outline-variant/40">
+<span class="material-symbols-outlined text-[20px]" data-icon="no_photography">no_photography</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider">Unplugged Ceremony</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug text-[11px]">
+            Simpan ponsel Anda sejenak selama pengucapan janji suci.
+          </p>
+</div>
+<!-- Badge 3: Health & Safety -->
+<div class="p-3.5 bg-surface-container-low border border-outline-variant/40 rounded-lg text-center flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center mb-2 text-secondary border border-outline-variant/40">
+<span class="material-symbols-outlined text-[20px]" data-icon="sanitizer">sanitizer</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider">Kesehatan Bersama</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug text-[11px]">
+            Fasilitas sanitasi dan masker elegan disediakan di resepsionis.
+          </p>
+</div>
+<!-- Badge 4: Footwear advice -->
+<div class="p-3.5 bg-surface-container-low border border-outline-variant/40 rounded-lg text-center flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center mb-2 text-secondary border border-outline-variant/40">
+<span class="material-symbols-outlined text-[20px]" data-icon="steps">steps</span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface uppercase tracking-wider">Alas Kaki Nyaman</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-snug text-[11px]">
+            Area tebing &amp; rumput, disarankan menggunakan block heels.
+          </p>
+</div>
+</div>
+</section>
+<!-- Warm Sign-off Monogram -->
+<div class="text-center pt-4 pb-2">
+<p class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Can't wait to celebrate with you</p>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-1 italic">Arif &amp; Maya</p>
+</div>
+</main>
+<!-- Bottom Nav Bar (Shared Component JSON Conformance) -->
+<!-- Contextual Destination Check: Screen 3 is 'Events Itinerary', mapping strictly to active tab 'Events' (index 2) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-xs py-space-xs max-w-lg mx-auto bg-surface/90 backdrop-blur-lg shadow-md border-t border-outline-variant/30">
+<!-- Item 1: Cover -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 py-1 hover:text-primary transition-colors duration-200 active:scale-95 flex-1" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="favorite">favorite</span>
+<span class="font-label-sm text-label-sm mt-0.5">Cover</span>
+</a>
+<!-- Item 2: Couple -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 py-1 hover:text-primary transition-colors duration-200 active:scale-95 flex-1" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="diamond">diamond</span>
+<span class="font-label-sm text-label-sm mt-0.5">Couple</span>
+</a>
+<!-- Item 3: Events (ACTIVE) -->
+<a aria-current="page" class="flex flex-col items-center justify-center text-primary font-semibold py-1 hover:text-primary transition-colors duration-200 active:scale-95 flex-1" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="calendar_today" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-label-sm text-label-sm mt-0.5 font-bold">Events</span>
+</a>
+<!-- Item 4: Story -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 py-1 hover:text-primary transition-colors duration-200 active:scale-95 flex-1" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="photo_library">photo_library</span>
+<span class="font-label-sm text-label-sm mt-0.5">Story</span>
+</a>
+<!-- Item 5: RSVP -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 py-1 hover:text-primary transition-colors duration-200 active:scale-95 flex-1" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="mail">mail</span>
+<span class="font-label-sm text-label-sm mt-0.5">RSVP</span>
+</a>
+</nav>
+<!-- Interactive Micro-scripts -->
+<script>
+    // Audio Player Toggle Simulation
+    const audioBtn = document.getElementById('audio-toggle');
+    let isPlaying = false;
+    
+    if (audioBtn) {
+      audioBtn.addEventListener('click', () => {
+        isPlaying = !isPlaying;
+        const icon = audioBtn.querySelector('.material-symbols-outlined');
+        if (isPlaying) {
+          icon.textContent = 'volume_up';
+          icon.classList.add('text-secondary');
+        } else {
+          icon.textContent = 'music_note';
+          icon.classList.remove('text-secondary');
+        }
+      });
+    }
+  </script>
+</body></html>

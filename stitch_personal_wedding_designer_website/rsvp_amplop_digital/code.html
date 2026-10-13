@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>A &amp; M Wedding - RSVP &amp; Digital Envelope</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#fbf9f6",
+            "surface-dim": "#dbdad7",
+            "inverse-primary": "#cbc5c0",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#87837f",
+            "on-surface-variant": "#4b463f",
+            "secondary": "#6c5b4d",
+            "on-secondary": "#ffffff",
+            "outline": "#7c766e",
+            "primary": "#000000",
+            "on-tertiary-fixed": "#241a00",
+            "surface-variant": "#e4e2df",
+            "surface-container-low": "#f5f3f0",
+            "surface-container": "#efeeeb",
+            "error": "#ba1a1a",
+            "on-surface": "#1b1c1a",
+            "on-secondary-fixed-variant": "#534437",
+            "tertiary-container": "#cca730",
+            "primary-fixed": "#e7e1dc",
+            "surface-container-high": "#eae8e5",
+            "on-primary-fixed-variant": "#494643",
+            "on-tertiary-fixed-variant": "#574500",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#1d1b18",
+            "secondary-container": "#f2dcca",
+            "secondary-fixed-dim": "#d8c3b2",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#ffe088",
+            "on-secondary-fixed": "#25190f",
+            "outline-variant": "#cdc5bc",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#f5decd",
+            "background": "#fbf9f6",
+            "inverse-surface": "#30312f",
+            "surface-tint": "#615e5a",
+            "on-secondary-container": "#706051",
+            "tertiary-fixed-dim": "#e9c349",
+            "surface-container-highest": "#e4e2df",
+            "on-background": "#1b1c1a",
+            "primary-fixed-dim": "#cbc5c0",
+            "surface-bright": "#fbf9f6",
+            "on-tertiary": "#ffffff",
+            "tertiary": "#735c00",
+            "on-tertiary-container": "#4f3e00",
+            "primary-container": "#1d1b18",
+            "inverse-on-surface": "#f2f0ed"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin": "1.25rem",
+            "space-xs": "0.375rem",
+            "margin-desktop": "4rem",
+            "space-xl": "3.5rem",
+            "space-lg": "2rem",
+            "gutter-desktop": "2rem",
+            "gutter": "1rem",
+            "space-sm": "0.75rem",
+            "space-md": "1.25rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-lg": ["Playfair Display"],
+            "headline-sm": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-lg": ["Playfair Display"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "display-lg-mobile": ["Playfair Display"]
+          },
+          "fontSize": {
+            "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.16em", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "54px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.12em", "fontWeight": "600" }],
+            "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.14em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-active {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Subtle spinning vinyl effect */
+    @keyframes slow-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .music-spin {
+      animation: slow-spin 9s linear infinite;
+    }
+    .music-paused {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col items-center selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TOP APP BAR (Shared Component Anchor) -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-margin py-space-xs max-w-lg mx-auto bg-surface/85 backdrop-blur-md shadow-sm border-b border-outline-variant/30">
+<!-- Leading Icon: Audio Player Toggle -->
+<button aria-label="Toggle Background Music" class="flex items-center gap-1.5 p-1.5 text-primary hover:text-primary transition-colors duration-200 active:scale-95" id="audio-toggle" type="button">
+<div class="music-spin text-primary flex items-center justify-center" id="disc-icon">
+<span class="material-symbols-outlined text-[20px]" data-icon="music_note">music_note</span>
+</div>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface-variant font-medium">Clair de Lune</span>
+</button>
+<!-- Center Monogram -->
+<div class="text-center font-headline-md text-headline-md tracking-wider text-on-surface uppercase font-bold">
+      A &amp; M
+    </div>
+<!-- Trailing Icon: Order of Service / Book -->
+<button aria-label="Order of Service" class="p-1.5 text-primary hover:text-primary transition-colors duration-200 active:scale-95 flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[22px]" data-icon="menu_book">menu_book</span>
+</button>
+</header>
+<!-- MAIN EDITORIAL CANVAS -->
+<main class="w-full max-w-lg px-margin pt-20 pb-32 flex flex-col">
+<!-- Crest & Editorial Chapter Header -->
+<div class="flex flex-col items-center text-center mt-4 mb-8">
+<!-- Monogram Crest -->
+<div class="w-12 h-12 rounded-full border border-tertiary-container/60 flex items-center justify-center mb-3 bg-surface-container-low shadow-sm">
+<span class="font-headline-sm text-headline-sm text-tertiary italic">am</span>
+</div>
+<span class="font-label-md text-label-md uppercase tracking-[0.2em] text-secondary mb-1">Pernikahan Suci Arya &amp; Maya</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-on-surface font-normal">Kehadiran &amp; Doa</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mt-2 leading-relaxed">
+        Suatu kehormatan dan kebahagiaan bagi kami atas doa restu serta kehadiran Bapak/Ibu/Saudara/i.
+      </p>
+<!-- Hairline Ornament -->
+<div class="flex items-center justify-center gap-3 w-32 mt-6">
+<div class="h-px bg-outline-variant/60 flex-1"></div>
+<span class="material-symbols-outlined text-outline-variant text-[14px]" data-icon="diamond">diamond</span>
+<div class="h-px bg-outline-variant/60 flex-1"></div>
+</div>
+</div>
+<!-- SECTION 1: KONFIRMASI KEHADIRAN (RSVP FORM) -->
+<section class="bg-surface-container-low border border-outline-variant/40 rounded-xl p-5 mb-space-xl shadow-[0_12px_36px_-4px_rgba(28,26,23,0.03)]">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="mail">mail</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Konfirmasi Kehadiran</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+        Mohon konfirmasi kesediaan hadir sebelum 24 September 2025 demi kelancaran reservasi jamuan.
+      </p>
+<form class="flex flex-col gap-5" id="rsvp-form">
+<!-- Guest Name Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant" for="guest-name">
+            Nama Tamu Undangan
+          </label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest/80 border border-outline-variant rounded-lg px-3.5 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200" id="guest-name" name="guest_name" placeholder="Masukkan nama lengkap Anda" required="" type="text" value="Dimas &amp; Partner"/>
+<span class="material-symbols-outlined absolute right-3.5 top-3.5 text-on-surface-variant/50 text-[18px]" data-icon="badge">badge</span>
+</div>
+</div>
+<!-- Attendance Segmented Radio Pills -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">
+            Status Kehadiran
+          </label>
+<div class="grid grid-cols-1 gap-2.5">
+<!-- Hadir Option -->
+<label class="relative flex items-center p-3.5 rounded-lg border border-outline-variant bg-surface-container-lowest cursor-pointer transition-all duration-200 has-[:checked]:border-primary has-[:checked]:bg-primary/[0.03]">
+<input checked="" class="w-4 h-4 text-primary border-outline focus:ring-primary focus:ring-1 cursor-pointer" name="attendance" type="radio" value="hadir"/>
+<div class="ml-3 flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Hadir dengan Senang Hati</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kami akan hadir langsung di lokasi perayaan.</span>
+</div>
+</label>
+<!-- Tidak Hadir Option -->
+<label class="relative flex items-center p-3.5 rounded-lg border border-outline-variant bg-surface-container-lowest cursor-pointer transition-all duration-200 has-[:checked]:border-primary has-[:checked]:bg-primary/[0.03]">
+<input class="w-4 h-4 text-primary border-outline focus:ring-primary focus:ring-1 cursor-pointer" name="attendance" type="radio" value="absen"/>
+<div class="ml-3 flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Maaf, Belum Bisa Hadir</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mendoakan kebahagiaan kedua mempelai dari jauh.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Number of Guests Selector -->
+<div class="flex flex-col gap-2" id="guest-count-container">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">
+            Jumlah Tamu (Reservasi Kursi)
+          </label>
+<div class="grid grid-cols-2 gap-3">
+<label class="flex items-center justify-center p-3 border border-outline-variant rounded-lg bg-surface-container-lowest cursor-pointer transition-all duration-200 has-[:checked]:border-primary has-[:checked]:bg-primary has-[:checked]:text-on-primary">
+<input class="sr-only" name="guest_count" type="radio" value="1"/>
+<span class="font-body-md text-body-md font-medium">1 Orang</span>
+</label>
+<label class="flex items-center justify-center p-3 border border-outline-variant rounded-lg bg-surface-container-lowest cursor-pointer transition-all duration-200 has-[:checked]:border-primary has-[:checked]:bg-primary has-[:checked]:text-on-primary">
+<input checked="" class="sr-only" name="guest_count" type="radio" value="2"/>
+<span class="font-body-md text-body-md font-medium">2 Orang</span>
+</label>
+</div>
+</div>
+<!-- Dietary Preferences / Special Notes -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant" for="dietary-notes">
+            Preferensi Diet / Catatan Khusus
+          </label>
+<input class="w-full bg-surface-container-lowest/80 border border-outline-variant rounded-lg px-3.5 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all duration-200 placeholder:text-on-surface-variant/40" id="dietary-notes" name="dietary_notes" placeholder="Contoh: Vegetarian, Bebas Gluten, Tanpa Alergi Udang" type="text"/>
+</div>
+<!-- Submit Button -->
+<button class="mt-2 w-full h-12 bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-wider rounded-lg flex items-center justify-center gap-2 hover:bg-on-surface transition-colors duration-200 active:scale-[0.99] shadow-sm" id="rsvp-submit-btn" type="submit">
+<span class="material-symbols-outlined text-[18px]" data-icon="send">send</span>
+<span>Kirim Konfirmasi RSVP</span>
+</button>
+<p class="hidden text-center font-body-sm text-body-sm text-secondary font-medium mt-1" id="rsvp-status-msg">
+          Terima kasih atas konfirmasi Anda. Sampai jumpa di hari bahagia kami!
+        </p>
+</form>
+</section>
+<!-- SECTION 2: TANDA KASIH & AMPLOP DIGITAL (WEDDING REGISTRY / GIFT) -->
+<section class="bg-surface-container-low border border-outline-variant/40 rounded-xl p-5 mb-space-xl shadow-[0_12px_36px_-4px_rgba(28,26,23,0.03)]">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="redeem">redeem</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Tanda Kasih &amp; Amplop Digital</h2>
+</div>
+<!-- Polite Greeting Note -->
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+        Doa restu Anda merupakan karunia terindah bagi kami. Namun jika Anda bermaksud memberikan tanda kasih berupa bingkisan atau amplop digital untuk bekal awal mahligai baru kami, kami menyediakannya dengan penuh kerendahan hati:
+      </p>
+<!-- Bank Cards List -->
+<div class="flex flex-col gap-4 mb-6">
+<!-- Bank BCA Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/60 rounded-xl p-4 flex flex-col justify-between gap-3 shadow-xs">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Transfer Bank</span>
+<p class="font-headline-sm text-headline-sm text-primary tracking-wide mt-0.5">BCA</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]" data-icon="account_balance">account_balance</span>
+</div>
+</div>
+<div class="bg-surface-container-low/70 rounded-lg p-3 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nomor Rekening:</span>
+<span class="font-label-lg text-label-lg font-bold tracking-wider text-on-surface" id="acc-bca">8720 192 881</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80">a/n Arya Danendra</span>
+</div>
+<button class="px-3 py-2 bg-surface-container-highest/80 hover:bg-outline-variant/50 text-on-surface rounded-lg font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1.5 transition-colors duration-150 active:scale-95" id="copy-btn-bca" onclick="copyToClipboard('8720192881', 'copy-btn-bca')" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="content_copy">content_copy</span>
+<span>Salin</span>
+</button>
+</div>
+</div>
+<!-- Bank Mandiri Card -->
+<div class="bg-surface-container-lowest border border-outline-variant/60 rounded-xl p-4 flex flex-col justify-between gap-3 shadow-xs">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Transfer Bank</span>
+<p class="font-headline-sm text-headline-sm text-primary tracking-wide mt-0.5">Bank Mandiri</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]" data-icon="account_balance">account_balance</span>
+</div>
+</div>
+<div class="bg-surface-container-low/70 rounded-lg p-3 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nomor Rekening:</span>
+<span class="font-label-lg text-label-lg font-bold tracking-wider text-on-surface" id="acc-mandiri">1370 0192 8331</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80">a/n Maya Kirana</span>
+</div>
+<button class="px-3 py-2 bg-surface-container-highest/80 hover:bg-outline-variant/50 text-on-surface rounded-lg font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1.5 transition-colors duration-150 active:scale-95" id="copy-btn-mandiri" onclick="copyToClipboard('137001928331', 'copy-btn-mandiri')" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="content_copy">content_copy</span>
+<span>Salin</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Actions: QRIS & Physical Gift Drawer Toggles -->
+<div class="grid grid-cols-1 gap-2.5">
+<!-- QRIS Trigger -->
+<button class="w-full py-3 px-4 border border-outline-variant bg-surface-container-lowest rounded-lg font-label-md text-label-md uppercase tracking-wider text-on-surface flex items-center justify-center gap-2 hover:bg-surface-variant/40 transition-colors duration-200" onclick="toggleModal('qris-modal')" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="qr_code_scanner">qr_code_scanner</span>
+<span>Buka QRIS Amplop Digital</span>
+</button>
+<!-- Physical Gift Address Trigger -->
+<button class="w-full py-3 px-4 border border-outline-variant bg-surface-container-lowest rounded-lg font-label-md text-label-md uppercase tracking-wider text-on-surface flex items-center justify-center gap-2 hover:bg-surface-variant/40 transition-colors duration-200" onclick="toggleAddressDetails()" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="inventory_2">inventory_2</span>
+<span>Kirim Hadiah Fisik (Alamat)</span>
+</button>
+</div>
+<!-- Collapsible Physical Gift Delivery Address -->
+<div class="hidden mt-4 pt-4 border-t border-outline-variant/40 flex flex-col gap-2 bg-surface-container-lowest/80 p-4 rounded-lg" id="address-drawer">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary">Alamat Penerimaan Kado:</span>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Arya Danendra &amp; Maya Kirana<br/>
+          Jl. Dharmawangsa Elok No. 18, Kebayoran Baru<br/>
+          Jakarta Selatan, DKI Jakarta 12160
+        </p>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Kontak Penerima: 0812-8890-1200 (Bpk. Danendra)</span>
+<button class="mt-2 self-start px-3 py-1.5 border border-outline-variant/80 rounded font-label-sm text-label-sm uppercase tracking-wider text-on-surface flex items-center gap-1.5 hover:bg-surface-container" id="copy-address-btn" onclick="copyToClipboard('Arya Danendra &amp; Maya Kirana - Jl. Dharmawangsa Elok No. 18, Kebayoran Baru, Jakarta Selatan 12160 (081288901200)', 'copy-address-btn')" type="button">
+<span class="material-symbols-outlined text-[14px]" data-icon="content_copy">content_copy</span>
+<span>Salin Alamat Lengkap</span>
+</button>
+</div>
+</section>
+<!-- SECTION 3: DOA & UCAPAN (LIVE GUESTBOOK / WISHES) -->
+<section class="bg-surface-container-low border border-outline-variant/40 rounded-xl p-5 mb-space-xl shadow-[0_12px_36px_-4px_rgba(28,26,23,0.03)]">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="chat">chat</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Doa &amp; Ucapan</h2>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">38 Ucapan</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-5">
+        Tinggalkan untaian doa dan pesan manis untuk mengiringi langkah pertama kami.
+      </p>
+<!-- Wishes Input Form -->
+<form class="flex flex-col gap-3 mb-6" id="wishes-form">
+<div class="flex flex-col gap-1">
+<input class="w-full bg-surface-container-lowest/80 border border-outline-variant rounded-lg px-3.5 py-2.5 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" id="wish-sender" placeholder="Nama Anda" required="" type="text" value="Dimas Wicaksono"/>
+</div>
+<div class="flex flex-col gap-1">
+<textarea class="w-full bg-surface-container-lowest/80 border border-outline-variant rounded-lg p-3.5 font-body-md text-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary resize-none" id="wish-text" placeholder="Tuliskan ucapan selamat dan doa tulus Anda..." required="" rows="3"></textarea>
+</div>
+<button class="h-10 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded-lg flex items-center justify-center gap-2 hover:bg-on-surface transition-colors duration-150 active:scale-[0.99]" type="submit">
+<span class="material-symbols-outlined text-[16px]" data-icon="send">send</span>
+<span>Kirim Doa Restu</span>
+</button>
+</form>
+<!-- Recent Wishes Feed -->
+<div class="flex flex-col gap-3.5 divide-y divide-outline-variant/30" id="wishes-feed">
+<!-- Wish Card 1 -->
+<article class="pt-3.5 first:pt-0 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold flex items-center justify-center">
+                RL
+              </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Raditya &amp; Laras</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/60">2 jam yang lalu</span>
+</div>
+</div>
+<!-- Reaction button -->
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-error transition-colors" onclick="toggleHeart(this)" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span>
+<span class="font-label-sm text-label-sm reaction-count">14</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10.5 leading-relaxed">
+            Selamat menempuh babak kehidupan baru Arya &amp; Maya! Semoga selalu diberkahi keharmonisan, kesabaran, dan tawa dalam setiap cerita rumah tangga kalian.
+          </p>
+</article>
+<!-- Wish Card 2 -->
+<article class="pt-3.5 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold flex items-center justify-center">
+                AS
+              </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Anindita Saraswati</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/60">5 jam yang lalu</span>
+</div>
+</div>
+<button class="flex items-center gap-1 text-error transition-colors" onclick="toggleHeart(this)" type="button">
+<span class="material-symbols-outlined text-[18px] fill-active" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-sm text-label-sm reaction-count">29</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10.5 leading-relaxed">
+            Maya sayang, cantiknya kamu hari ini! Bahagia luar biasa melihat kalian berdua bersatu. Semoga senantiasa saling mengasihi sampai maut memisahkan.
+          </p>
+</article>
+<!-- Wish Card 3 -->
+<article class="pt-3.5 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md font-bold flex items-center justify-center">
+                BA
+              </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Bramasta Adi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/60">Kemarin</span>
+</div>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-error transition-colors" onclick="toggleHeart(this)" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite">favorite</span>
+<span class="font-label-sm text-label-sm reaction-count">8</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pl-10.5 leading-relaxed">
+            Happy wedding, brother Arya! Welcome to the married club. Doa terbaik buat kalian berdua dan keluarga besar.
+          </p>
+</article>
+</div>
+</section>
+<!-- Closing Botanical Sign-off -->
+<div class="text-center py-6">
+<span class="font-headline-sm text-headline-sm italic text-secondary">With endless love,</span>
+<p class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">Arya &amp; Maya</p>
+<p class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-outline mt-2">24 • 10 • 2025</p>
+</div>
+</main>
+<!-- QRIS MODAL DIALOG -->
+<div class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-margin" id="qris-modal">
+<div class="bg-surface rounded-xl max-w-sm w-full p-6 flex flex-col items-center text-center shadow-xl border border-outline-variant/40 animate-in fade-in zoom-in-95 duration-200">
+<div class="flex items-center justify-between w-full mb-3">
+<span class="font-headline-sm text-headline-sm text-on-surface">QRIS Amplop Digital</span>
+<button class="text-on-surface-variant hover:text-primary" onclick="toggleModal('qris-modal')" type="button">
+<span class="material-symbols-outlined text-[24px]" data-icon="close">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+        Dapat dipindai melalui BCA Mobile, Livin' Mandiri, GoPay, OVO, ShopeePay, atau aplikasi perbankan apa pun.
+      </p>
+<!-- Clean QR Code Visual Representation using HTML/SVG styled patterns -->
+<div class="p-4 bg-surface-container-lowest border border-outline-variant/60 rounded-xl shadow-inner mb-4 flex flex-col items-center">
+<div class="w-48 h-48 bg-surface-container flex flex-col items-center justify-center p-3 relative border border-outline-variant">
+<div class="w-full h-full flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[64px] text-primary" data-icon="qr_code_2">qr_code_2</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">NMID: ID10293847291</span>
+</div>
+<div class="absolute inset-0 bg-primary/5 flex items-center justify-center pointer-events-none"></div>
+</div>
+<span class="font-label-md text-label-md uppercase tracking-widest text-on-surface font-bold mt-2">ARYA &amp; MAYA WEDDING</span>
+</div>
+<button class="w-full py-2.5 bg-primary text-on-primary rounded font-label-md text-label-md uppercase tracking-wider hover:bg-on-surface" onclick="toggleModal('qris-modal')" type="button">
+        Tutup
+      </button>
+</div>
+</div>
+<!-- BOTTOM NAVIGATION BAR (Shared Component Anchor) -->
+<!-- Contextual lock: Active navigation item mapped strictly to "RSVP" -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-xs py-space-xs max-w-lg mx-auto pb-safe bg-surface/90 backdrop-blur-lg shadow-md border-t border-outline-variant/30">
+<!-- Item 1: Cover -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 py-1 hover:text-primary transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+<span class="font-label-sm text-label-sm mt-0.5">Cover</span>
+</a>
+<!-- Item 2: Couple -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 py-1 hover:text-primary transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="diamond">diamond</span>
+<span class="font-label-sm text-label-sm mt-0.5">Couple</span>
+</a>
+<!-- Item 3: Events -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 py-1 hover:text-primary transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-sm text-label-sm mt-0.5">Events</span>
+</a>
+<!-- Item 4: Story -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/70 py-1 hover:text-primary transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="photo_library">photo_library</span>
+<span class="font-label-sm text-label-sm mt-0.5">Story</span>
+</a>
+<!-- Item 5: RSVP (ACTIVE STATE MATCHING PAGE INTENT) -->
+<a class="flex flex-col items-center justify-center text-primary font-semibold py-1 hover:text-primary transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px] fill-active" data-icon="mail" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="font-label-sm text-label-sm mt-0.5">RSVP</span>
+</a>
+</nav>
+<!-- Interactive Logic -->
+<script>
+    // Copy to clipboard with instant visual feedback
+    function copyToClipboard(text, buttonId) {
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById(buttonId);
+        if (btn) {
+          const originalContent = btn.innerHTML;
+          btn.innerHTML = `<span class="material-symbols-outlined text-[16px]">check</span><span>Tersalin!</span>`;
+          btn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+          setTimeout(() => {
+            btn.innerHTML = originalContent;
+            btn.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+          }, 2200);
+        }
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+    }
+
+    // Modal Drawer toggle
+    function toggleModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        if (modal.classList.contains('hidden')) {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        } else {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      }
+    }
+
+    // Collapsible Physical Address Drawer
+    function toggleAddressDetails() {
+      const drawer = document.getElementById('address-drawer');
+      if (drawer) {
+        drawer.classList.toggle('hidden');
+      }
+    }
+
+    // Reaction Heart Toggle
+    function toggleHeart(button) {
+      const icon = button.querySelector('.material-symbols-outlined');
+      const counter = button.querySelector('.reaction-count');
+      let count = parseInt(counter.textContent, 10);
+
+      const isFilled = icon.getAttribute('style') && icon.getAttribute('style').includes("'FILL' 1");
+
+      if (isFilled) {
+        icon.style.fontVariationSettings = "'FILL' 0";
+        button.classList.remove('text-error');
+        button.classList.add('text-on-surface-variant');
+        counter.textContent = count - 1;
+      } else {
+        icon.style.fontVariationSettings = "'FILL' 1";
+        button.classList.remove('text-on-surface-variant');
+        button.classList.add('text-error');
+        counter.textContent = count + 1;
+      }
+    }
+
+    // RSVP form submission simulation
+    document.getElementById('rsvp-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('rsvp-submit-btn');
+      const statusMsg = document.getElementById('rsvp-status-msg');
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span><span>Memproses...</span>`;
+      
+      setTimeout(() => {
+        submitBtn.innerHTML = `<span class="material-symbols-outlined text-[18px]">check_circle</span><span>Konfirmasi Terkirim</span>`;
+        submitBtn.classList.remove('bg-primary');
+        submitBtn.classList.add('bg-secondary');
+        statusMsg.classList.remove('hidden');
+      }, 800);
+    });
+
+    // Dynamic guest count toggle based on attendance
+    const attendanceRadios = document.querySelectorAll('input[name="attendance"]');
+    const guestCountContainer = document.getElementById('guest-count-container');
+    attendanceRadios.forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        if (e.target.value === 'absen') {
+          guestCountContainer.classList.add('opacity-40', 'pointer-events-none');
+        } else {
+          guestCountContainer.classList.remove('opacity-40', 'pointer-events-none');
+        }
+      });
+    });
+
+    // Wishes feed append interaction
+    document.getElementById('wishes-form')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('wish-sender');
+      const textInput = document.getElementById('wish-text');
+      const wishesFeed = document.getElementById('wishes-feed');
+
+      if (nameInput.value.trim() && textInput.value.trim()) {
+        const initials = nameInput.value.trim().substring(0, 2).toUpperCase();
+        const newCard = document.createElement('article');
+        newCard.className = 'pt-3.5 first:pt-0 flex flex-col gap-2 animate-in fade-in duration-300';
+        newCard.innerHTML = `
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center justify-center">
+                ${initials}
+              </div>
+              <div class="flex flex-col">
+                <span class="font-label-lg text-label-lg text-on-surface font-semibold">${nameInput.value.trim()}</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant/60">Baru saja</span>
+              </div>
+            </div>
+            <button type="button" onclick="toggleHeart(this)" class="flex items-center gap-1 text-error transition-colors">
+              <span class="material-symbols-outlined text-[18px] fill-active" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+              <span class="font-label-sm text-label-sm reaction-count">1</span>
+            </button>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant pl-10.5 leading-relaxed">
+            ${textInput.value.trim()}
+          </p>
+        `;
+        wishesFeed.prepend(newCard);
+        textInput.value = '';
+      }
+    });
+
+    // Music toggle button interaction
+    const audioToggle = document.getElementById('audio-toggle');
+    const discIcon = document.getElementById('disc-icon');
+    let isPlaying = true;
+    audioToggle?.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        discIcon.classList.remove('music-paused');
+      } else {
+        discIcon.classList.add('music-paused');
+      }
+    });
+  </script>
+</body></html>
